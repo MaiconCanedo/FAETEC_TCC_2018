@@ -5,10 +5,11 @@
 
     <persistence-unit name="dados_publicos-postgres">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>br.org.faetectcc2018.modelo.Candidato</class>
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
-            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/dados_publicos" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/perfil" /> <!--dados_publicos-->
             <property name="javax.persistence.jdbc.user" value="postgres" />
             <property name="javax.persistence.jdbc.password" value="root" />
 

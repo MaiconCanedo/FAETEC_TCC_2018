@@ -1,53 +1,196 @@
-package br.org.faetectcc2018.dto;
+package br.org.faetectcc2018.modelo;
 
+import javax.persistence.*;
+import java.util.Objects;
+
+@Entity
+@Table(name = "candidatos")
 public class Candidato {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    @Column(name = "ano_eleicao")
     private String anoEleicao;
-    private String numTruno;
+    @Column(name = "num_turno")
+    private String numTurno;
+    @Column(name = "descricao_eleicao")
     private String descricaoEleicao;
+    @Column(name = "sigla_uf")
     private String siglaUf;
+    @Column(name = "sigla_ue")
     private String siglaUE;
+    @Column(name = "descricao_ue")
+    private String descricaoUE;
+    @Column(name = "codigo_cargo")
     private String codigoCargo;
+    @Column(name = "descricao_cargo")
     private String descricaoCargo;
+    @Column(name = "nome_candidato")
     private String nomeCandidato;
+    @Column(name = "sequencial_candidato")
     private String sequencialCandidato;
+    @Column(name = "numero_candidato")
     private String numeroCandidato;
+    @Column(name = "cpf_candidato")
     private String cpfCandidato;
+    @Column(name = "nome_urna_candidato")
     private String nomeUrnaCandidato;
+    @Column(name = "cod_situacao_candidatura")
     private String codSituacaoCandidatura;
+    @Column(name = "des_situacao_candidatura")
     private String desSituacaoCandidatura;
+    @Column(name = "numero_partido")
     private String numeroPartido;
+    @Column(name = "sigla_partido")
     private String siglaPartido;
+    @Column(name = "nome_partido")
     private String nomePartido;
+    @Column(name = "codigo_legenda")
     private String codigoLegenda;
-    private String siglaLgenda;
+    @Column(name = "sigla_legenda")
+    private String siglaLegenda;
+    @Column(name = "composicao_legenda")
     private String composicaoLegenda;
+    @Column(name = "nome_legenda")
     private String nomeLegenda;
+    @Column(name = "codigo_ocupacao")
     private String codigoOcupacao;
+    @Column(name = "descricao_ocupacao")
     private String descricaoOcupacao;
+    @Column(name = "data_nascimento")
     private String dataNascimento;
+    @Column(name = "num_titulo_eleitoral_candidato")
     private String numTituloEleitoralCandidato;
+    @Column(name = "idade_data_eleicao")
     private String idadeDataEleicao;
+    @Column(name = "codigo_sexo")
     private String codigoSexo;
+    @Column(name = "descricao_sexo")
     private String descricaoSexo;
+    @Column(name = "cod_grau_instrucao")
     private String codGrauInstrucao;
+    @Column(name = "descricao_grau_instrucao")
     private String descricaoGrauInstrucao;
+    @Column(name = "codigo_estado_civil")
     private String codigoEstadoCivil;
+    @Column(name = "descricao_estado_civil")
     private String descricaoEstadoCivil;
+    @Column(name = "codigo_cor_raca")
     private String codigoCorRaca;
+    @Column(name = "descricao_cor_raca")
     private String descricaoCorRaca;
+    @Column(name = "codigo_nacionalidade")
     private String codigoNascionalidade;
+    @Column(name = "descricao_nacionalidade")
     private String descricaoNascionalidade;
+    @Column(name = "sigla_uf_nascimento")
     private String siglaUfNascimento;
+    @Column(name = "codigo_municipio_nascimento")
     private String codigoMunicipioNascimento;
+    @Column(name = "nome_municipio_nascimento")
     private String nomeMunicipioNascimento;
+    @Column(name = "despesa_max_campanha")
     private String despesaMaxCampanha;
+    @Column(name = "cod_sit_tot_turno")
     private String codSitTotTurno;
+    @Column(name = "desc_sit_tot_turno")
     private String descSitTotTurno;
+    @Column(name = "nm_email")
     private String nmEmail;
+    @Column(name = "datahora_geracao")
     private String dataHoraGeracao;
 
     public Candidato() {}
+
+    @Override
+    public String toString() {
+        return "Candidato{" +
+                "id=" + id +
+                ", anoEleicao='" + anoEleicao + '\'' +
+                ", numTurno='" + numTurno + '\'' +
+                ", descricaoEleicao='" + descricaoEleicao + '\'' +
+                ", siglaUf='" + siglaUf + '\'' +
+                ", siglaUE='" + siglaUE + '\'' +
+                ", descricaoUE='" + descricaoUE + '\'' +
+                ", codigoCargo='" + codigoCargo + '\'' +
+                ", descricaoCargo='" + descricaoCargo + '\'' +
+                ", nomeCandidato='" + nomeCandidato + '\'' +
+                ", sequencialCandidato='" + sequencialCandidato + '\'' +
+                ", numeroCandidato='" + numeroCandidato + '\'' +
+                ", cpfCandidato='" + cpfCandidato + '\'' +
+                ", nomeUrnaCandidato='" + nomeUrnaCandidato + '\'' +
+                ", codSituacaoCandidatura='" + codSituacaoCandidatura + '\'' +
+                ", desSituacaoCandidatura='" + desSituacaoCandidatura + '\'' +
+                ", numeroPartido='" + numeroPartido + '\'' +
+                ", siglaPartido='" + siglaPartido + '\'' +
+                ", nomePartido='" + nomePartido + '\'' +
+                ", codigoLegenda='" + codigoLegenda + '\'' +
+                ", siglaLegenda='" + siglaLegenda + '\'' +
+                ", composicaoLegenda='" + composicaoLegenda + '\'' +
+                ", nomeLegenda='" + nomeLegenda + '\'' +
+                ", codigoOcupacao='" + codigoOcupacao + '\'' +
+                ", descricaoOcupacao='" + descricaoOcupacao + '\'' +
+                ", dataNascimento='" + dataNascimento + '\'' +
+                ", numTituloEleitoralCandidato='" + numTituloEleitoralCandidato + '\'' +
+                ", idadeDataEleicao='" + idadeDataEleicao + '\'' +
+                ", codigoSexo='" + codigoSexo + '\'' +
+                ", descricaoSexo='" + descricaoSexo + '\'' +
+                ", codGrauInstrucao='" + codGrauInstrucao + '\'' +
+                ", descricaoGrauInstrucao='" + descricaoGrauInstrucao + '\'' +
+                ", codigoEstadoCivil='" + codigoEstadoCivil + '\'' +
+                ", descricaoEstadoCivil='" + descricaoEstadoCivil + '\'' +
+                ", codigoCorRaca='" + codigoCorRaca + '\'' +
+                ", descricaoCorRaca='" + descricaoCorRaca + '\'' +
+                ", codigoNascionalidade='" + codigoNascionalidade + '\'' +
+                ", descricaoNascionalidade='" + descricaoNascionalidade + '\'' +
+                ", siglaUfNascimento='" + siglaUfNascimento + '\'' +
+                ", codigoMunicipioNascimento='" + codigoMunicipioNascimento + '\'' +
+                ", nomeMunicipioNascimento='" + nomeMunicipioNascimento + '\'' +
+                ", despesaMaxCampanha='" + despesaMaxCampanha + '\'' +
+                ", codSitTotTurno='" + codSitTotTurno + '\'' +
+                ", descSitTotTurno='" + descSitTotTurno + '\'' +
+                ", nmEmail='" + nmEmail + '\'' +
+                ", dataHoraGeracao='" + dataHoraGeracao + '\'' +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Candidato candidato = (Candidato) o;
+        return Objects.equals(id, candidato.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getDescricaoUE() {
+        return descricaoUE;
+    }
+
+    public void setDescricaoUE(String descricaoUE) {
+        this.descricaoUE = descricaoUE;
+    }
+
+    public String getSiglaLegenda() {
+        return siglaLegenda;
+    }
+
+    public void setSiglaLegenda(String siglaLegenda) {
+        this.siglaLegenda = siglaLegenda;
+    }
 
     public String getAnoEleicao() {
         return anoEleicao;
@@ -57,12 +200,12 @@ public class Candidato {
         this.anoEleicao = anoEleicao;
     }
 
-    public String getNumTruno() {
-        return numTruno;
+    public String getNumTurno() {
+        return numTurno;
     }
 
-    public void setNumTruno(String numTruno) {
-        this.numTruno = numTruno;
+    public void setNumTurno(String numTruno) {
+        this.numTurno = numTruno;
     }
 
     public String getDescricaoEleicao() {
@@ -191,14 +334,6 @@ public class Candidato {
 
     public void setCodigoLegenda(String codigoLegenda) {
         this.codigoLegenda = codigoLegenda;
-    }
-
-    public String getSiglaLgenda() {
-        return siglaLgenda;
-    }
-
-    public void setSiglaLgenda(String siglaLgenda) {
-        this.siglaLgenda = siglaLgenda;
     }
 
     public String getComposicaoLegenda() {
