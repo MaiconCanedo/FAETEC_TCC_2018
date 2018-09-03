@@ -6,6 +6,7 @@
     <persistence-unit name="dados_publicos-postgres">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <class>br.org.faetectcc2018.modelo.Candidato</class>
+        <class>br.org.faetectcc2018.modelo.BemCandidato</class>
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />

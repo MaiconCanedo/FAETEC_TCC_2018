@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f74188f3-06d6-4ab6-af58-8af2043d34f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/br/org/faetectcc2018/dao/BemCandidatoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/org/faetectcc2018/dao/CandidatoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/org/faetectcc2018/teste/TesteJPA.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FAETEC_TCC_2018.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FAETEC_TCC_2018.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/org/faetectcc2018/dto/BemCandidato.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/org/faetectcc2018/modelo/BemCandidato.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/org/faetectcc2018/dto/Candidato.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/org/faetectcc2018/modelo/Candidato.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/org/faetectcc2018/teste/TesteJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/org/faetectcc2018/teste/TesteJPA.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,7 +27,7 @@
         <counts>
           <entry key="BemCandidato" value="1" />
           <entry key="class" value="2" />
-          <entry key="java" value="18" />
+          <entry key="java" value="19" />
           <entry key="md" value="1" />
           <entry key="properties" value="1" />
           <entry key="xml" value="2" />
@@ -41,7 +36,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="2" />
-          <entry key="JAVA" value="18" />
+          <entry key="JAVA" value="19" />
           <entry key="Markdown" value="1" />
           <entry key="Properties" value="1" />
           <entry key="UML" value="1" />
@@ -51,18 +46,18 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="13" />
-          <entry key="java" value="2593" />
+          <entry key="java" value="2663" />
           <entry key="properties" value="51" />
-          <entry key="txt" value="91" />
-          <entry key="xml" value="41" />
+          <entry key="txt" value="155" />
+          <entry key="xml" value="50" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2593" />
-          <entry key="PLAIN_TEXT" value="104" />
+          <entry key="JAVA" value="2663" />
+          <entry key="PLAIN_TEXT" value="168" />
           <entry key="Properties" value="51" />
-          <entry key="XML" value="41" />
+          <entry key="XML" value="50" />
         </counts>
       </usages-collector>
     </session>
@@ -74,27 +69,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
               <caret line="6" column="32" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/br/org/faetectcc2018/teste/TesteJPA.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#toString#0;class#BemCandidato#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/br/org/faetectcc2018/dao/BemCandidatoDAO.java">
+        <entry file="file://$PROJECT_DIR$/src/br/org/faetectcc2018/teste/TesteJPA.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+            <state relative-caret-position="425">
+              <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -103,10 +89,25 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
+        <entry file="file://$PROJECT_DIR$/src/br/org/faetectcc2018/dao/BemCandidatoDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="102" selection-start-line="11" selection-start-column="102" selection-end-line="11" selection-end-column="102" />
+            <state>
+              <caret column="33" lean-forward="true" selection-start-column="33" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/br/org/faetectcc2018/dao/CandidatoDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -139,15 +140,15 @@
         <option value="$PROJECT_DIR$/src/br/org/faetectcc2018/connection/ConexaoJDBC.java" />
         <option value="$PROJECT_DIR$/src/config.properties" />
         <option value="$PROJECT_DIR$/src/br/org/faetectcc2018/connection/ConexaoJPA.java" />
-        <option value="$PROJECT_DIR$/src/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/br/org/faetectcc2018/dto/Candidato.java" />
         <option value="$PROJECT_DIR$/src/br/org/faetectcc2018/dto/BemCandidato.java" />
         <option value="$PROJECT_DIR$/src/br/org/faetectcc2018/modelo/BemCandidato.java" />
         <option value="$PROJECT_DIR$/src/br/org/faetectcc2018/dao/Candidato.java" />
         <option value="$PROJECT_DIR$/src/br/org/faetectcc2018/dao/BemCandidato.java" />
-        <option value="$PROJECT_DIR$/src/br/org/faetectcc2018/teste/TesteJPA.java" />
         <option value="$PROJECT_DIR$/src/br/org/faetectcc2018/dao/CandidatoDAO.java" />
         <option value="$PROJECT_DIR$/src/br/org/faetectcc2018/dao/BemCandidatoDAO.java" />
+        <option value="$PROJECT_DIR$/src/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/src/br/org/faetectcc2018/teste/TesteJPA.java" />
       </list>
     </option>
   </component>
@@ -225,7 +226,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535986382414" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535987209926" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
@@ -297,7 +298,7 @@
       <option name="presentableId" value="Default" />
       <updated>1535933160266</updated>
       <workItem from="1535933168006" duration="8125000" />
-      <workItem from="1535980925942" duration="5427000" />
+      <workItem from="1535980925942" duration="6246000" />
     </task>
     <task id="LOCAL-00001" summary="criando classes dto">
       <created>1535937159451</created>
@@ -320,17 +321,24 @@
       <option name="project" value="LOCAL" />
       <updated>1535941095290</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Mapeando entidades e criando metodo generico de listagem.">
+      <created>1535986482508</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1535986482508</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13552000" />
+    <option name="totallyTimeSpent" value="14371000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1036" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14792176" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14792176" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Persistence" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -349,7 +357,7 @@
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.28603104" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3292683" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3292683" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3292683" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -383,7 +391,8 @@
     <MESSAGE value="criando classes dto" />
     <MESSAGE value="Create DTOs Getters and Setters" />
     <MESSAGE value="Craindo classes de conexao" />
-    <option name="LAST_COMMIT_MESSAGE" value="Craindo classes de conexao" />
+    <MESSAGE value="Mapeando entidades e criando metodo generico de listagem." />
+    <option name="LAST_COMMIT_MESSAGE" value="Mapeando entidades e criando metodo generico de listagem." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -458,20 +467,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
+    <entry file="jar://$PROJECT_DIR$/lib/javax.persistence-api-2.2.jar!/javax/persistence/PersistenceException.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="102" selection-start-line="11" selection-start-column="102" selection-end-line="11" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/org/faetectcc2018/teste/TesteJPA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="204">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
@@ -479,6 +478,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="6" column="32" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+          <folding>
+            <element signature="method#toString#0;class#BemCandidato#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/org/faetectcc2018/dao/BemCandidatoDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="33" lean-forward="true" selection-start-column="33" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -492,17 +511,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/javax.persistence-api-2.2.jar!/javax/persistence/PersistenceException.class">
+    <entry file="file://$PROJECT_DIR$/src/br/org/faetectcc2018/teste/TesteJPA.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/org/faetectcc2018/dao/BemCandidatoDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+        <state relative-caret-position="425">
+          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
