@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="FAETEC_TCC_2018" target="1.8" />
+      <module name="FAETEC_TCC_2018" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,21 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f74188f3-06d6-4ab6-af58-8af2043d34f6" name="Default Changelist" comment="Montando servidor web e pagina principal para testes">
+    <list default="true" id="f74188f3-06d6-4ab6-af58-8af2043d34f6" name="Default Changelist" comment="'Fazendo mais teste'">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/FAETEC_TCC_2018_Web_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_0_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/repository/BemCandidatoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/listabens.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/antlr-2.7.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/byte-buddy-1.8.17.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/classmate-1.3.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/dom4j-1.6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/hibernate-commons-annotations-5.0.4.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/hibernate-core-5.3.5.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/jandex-2.0.5.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/javassist-3.23.1-GA.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/javax.activation-api-1.2.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/javax.persistence-api-2.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/jboss-logging-3.3.2.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/jboss-transaction-api_1.2_spec-1.1.1.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/postgresql-42.2.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FAETEC_TCC_2018.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FAETEC_TCC_2018.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FAETEC_TCC_2018/META-INF/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FAETEC_TCC_2018/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/connection/ConexaoJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/connection/ConexaoJPA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/controller/CandidatoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/controller/CandidatoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/dao/BemCandidatoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/dao/BemCandidatoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/dao/CandidatoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/dao/CandidatoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/teste/TesteJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/teste/TesteJPA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/org/faetectcc2018/connection/ConexaoJPA.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/org/faetectcc2018/connection/ConexaoJPA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/org/faetectcc2018/controller/CandidatoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/org/faetectcc2018/controller/CandidatoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/org/faetectcc2018/dao/BemCandidatoDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/org/faetectcc2018/dao/BemCandidatoDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/org/faetectcc2018/dao/CandidatoDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/org/faetectcc2018/dao/CandidatoDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/org/faetectcc2018/teste/TesteJPA.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/org/faetectcc2018/teste/TesteJPA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -29,54 +38,56 @@
     <session id="-1222970477">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.59" value="1" />
           <entry key="project.open.time.63" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.83" value="1" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="BemCandidato" value="1" />
-          <entry key="class" value="5" />
-          <entry key="html" value="1" />
-          <entry key="java" value="24" />
+          <entry key="class" value="6" />
+          <entry key="html" value="2" />
+          <entry key="java" value="31" />
           <entry key="js" value="1" />
           <entry key="md" value="1" />
           <entry key="properties" value="1" />
-          <entry key="xml" value="4" />
+          <entry key="xml" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="5" />
-          <entry key="HTML" value="1" />
-          <entry key="JAVA" value="24" />
+          <entry key="CLASS" value="6" />
+          <entry key="HTML" value="2" />
+          <entry key="JAVA" value="31" />
           <entry key="JavaScript" value="1" />
           <entry key="Markdown" value="1" />
           <entry key="Properties" value="1" />
           <entry key="UML" value="1" />
-          <entry key="XML" value="4" />
+          <entry key="XML" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="13" />
-          <entry key="html" value="257" />
-          <entry key="java" value="3161" />
+          <entry key="html" value="459" />
+          <entry key="java" value="3299" />
           <entry key="properties" value="51" />
-          <entry key="txt" value="207" />
-          <entry key="xml" value="79" />
+          <entry key="txt" value="227" />
+          <entry key="xml" value="226" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="257" />
-          <entry key="JAVA" value="3161" />
-          <entry key="PLAIN_TEXT" value="220" />
+          <entry key="HTML" value="459" />
+          <entry key="JAVA" value="3299" />
+          <entry key="PLAIN_TEXT" value="240" />
           <entry key="Properties" value="51" />
-          <entry key="XML" value="79" />
+          <entry key="XML" value="226" />
         </counts>
       </usages-collector>
     </session>
@@ -84,22 +95,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/teste/TesteJPA.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="833">
+              <caret line="49" selection-start-line="49" selection-end-line="49" />
             </state>
           </provider>
         </entry>
@@ -107,8 +106,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="66" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
+            <state relative-caret-position="221">
+              <caret line="27" column="58" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/listabens.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="27" column="87" lean-forward="true" selection-start-line="27" selection-start-column="87" selection-end-line="27" selection-end-column="87" />
             </state>
           </provider>
         </entry>
@@ -116,8 +124,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/controller/CandidatoController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="272">
+              <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -128,12 +136,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/Configuracao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="221">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#346#347#0" expanded="true" />
-                <element signature="e#382#383#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -146,6 +152,7 @@
       <list>
         <option value="HTML File" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -178,11 +185,16 @@
         <option value="$PROJECT_DIR$/src/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/br/org/faetectcc2018/teste/TesteJPA.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/repository/CandidatoRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/teste/TesteJPA.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/Configuracao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/connection/ConexaoJPA.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/repository/BemCandidatoRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/dao/BemCandidatoDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/dao/CandidatoDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/teste/TesteJPA.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
         <option value="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/controller/CandidatoController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/listabens.html" />
       </list>
     </option>
   </component>
@@ -210,7 +222,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -251,7 +262,25 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="faetectcc2018" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="connection" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FAETEC_TCC_2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FAETEC_TCC_2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="faetectcc2018" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FAETEC_TCC_2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FAETEC_TCC_2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="faetectcc2018" type="462c0819:PsiDirectoryNode" />
+              <item name="modelo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FAETEC_TCC_2018" type="b2602c69:ProjectViewProjectNode" />
@@ -269,12 +298,21 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="FAETEC_TCC_2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FAETEC_TCC_2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -285,22 +323,23 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536074779400" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536155633194" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.25632185" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+    <property name="project.structure.side.proportion" value="0.39350525" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\maico\IdeaProjects\FAETEC_TCC_2018\src\main\resources" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\maico\IdeaProjects\FAETEC_TCC_2018\src\main\resources\templates" />
       <recent name="C:\Users\maico\IdeaProjects\FAETEC_TCC_2018\src\main\resources\static" />
       <recent name="C:\Users\maico\IdeaProjects\FAETEC_TCC_2018\src" />
       <recent name="C:\Users\maico\IdeaProjects\FAETEC_TCC_2018\lib" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\maico\IdeaProjects\FAETEC_TCC_2018\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -381,6 +420,8 @@
       <workItem from="1535933168006" duration="8125000" />
       <workItem from="1535980925942" duration="6246000" />
       <workItem from="1536067710787" duration="7140000" />
+      <workItem from="1536151196919" duration="1758000" />
+      <workItem from="1536153298219" duration="2353000" />
     </task>
     <task id="LOCAL-00001" summary="criando classes dto">
       <created>1535937159451</created>
@@ -414,13 +455,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21511000" />
+    <option name="totallyTimeSpent" value="25622000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1036" extended-state="6" />
     <layout>
-      <window_info id="Web" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1717604" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17542787" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Persistence" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -428,11 +468,11 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Spring" />
+      <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="0" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3292683" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.3059867" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.47560975" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -441,9 +481,9 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3292683" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3292683" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.3292683" />
+      <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.3292683" />
       <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.3104213" />
-      <window_info anchor="right" id="Bean Validation" />
+      <window_info anchor="bottom" id="Spring" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -453,6 +493,7 @@
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -477,7 +518,8 @@
     <MESSAGE value="Craindo classes de conexao" />
     <MESSAGE value="Mapeando entidades e criando metodo generico de listagem." />
     <MESSAGE value="Montando servidor web e pagina principal para testes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Montando servidor web e pagina principal para testes" />
+    <MESSAGE value="'Fazendo mais teste'" />
+    <option name="LAST_COMMIT_MESSAGE" value="'Fazendo mais teste'" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -512,11 +554,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#277#278#0" expanded="true" />
-            <element signature="e#327#328#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -527,65 +564,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/connection/ConexaoJPA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#365#366#0" expanded="true" />
-            <element signature="e#407#408#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/modelo/Candidato.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3685#6756#0" />
-            <element signature="e#7837#7838#0" expanded="true" />
-            <element signature="e#7877#7878#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/javax.persistence-api-2.2.jar!/javax/persistence/PersistenceException.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/modelo/BemCandidato.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
-          <folding>
-            <element signature="method#toString#0;class#BemCandidato#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/dao/BemCandidatoDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="78" lean-forward="true" selection-start-line="36" selection-start-column="78" selection-end-line="36" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="102" selection-start-line="12" selection-start-column="63" selection-end-line="12" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/javax.persistence-api-2.2.jar!/javax/persistence/PersistenceException.class" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.0.9.RELEASE/spring-data-commons-2.0.9.RELEASE.jar!/org/springframework/data/repository/CrudRepository.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -597,6 +584,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="79" lean-forward="true" selection-start-line="5" selection-start-column="79" selection-end-line="5" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/bootstrap/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/FAETEC_TCC_2018/META-INF/persistence.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/connection/ConexaoJPA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/repository/BemCandidatoRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -605,7 +613,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/dao/CandidatoDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="50">
           <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -615,57 +623,79 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/teste/TesteJPA.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        <state relative-caret-position="149">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/bootstrap/js/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="66" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/controller/CandidatoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-orm/5.0.8.RELEASE/spring-orm-5.0.8.RELEASE.jar!/org/springframework/orm/jpa/vendor/SpringHibernateJpaPersistenceProvider.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/Configuracao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#346#347#0" expanded="true" />
-            <element signature="e#382#383#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="833">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-orm/5.0.8.RELEASE/spring-orm-5.0.8.RELEASE.jar!/org/springframework/orm/jpa/vendor/SpringHibernateJpaPersistenceProvider.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/Configuracao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/dao/BemCandidatoDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/modelo/BemCandidato.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+          <folding>
+            <element signature="method#toString#0;class#BemCandidato#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/controller/CandidatoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="27" column="58" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/listabens.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="87" lean-forward="true" selection-start-line="27" selection-start-column="87" selection-end-line="27" selection-end-column="87" />
         </state>
       </provider>
     </entry>
@@ -675,10 +705,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>FAETEC_TCC_2018:Web exploded</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.23877746" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -721,11 +753,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>FAETEC_TCC_2018</last-edited>
+          <last-edited>Web|FAETEC_TCC_2018</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.25632185" />
+                <option value="0.39350525" />
               </list>
             </option>
           </splitter-proportions>
@@ -749,7 +781,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.6310345" />
+                <option value="0.39350525" />
               </list>
             </option>
           </splitter-proportions>

@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class TesteJPA {
 
-    private static CandidatoDAO candidatoDAO = new CandidatoDAO();
+    /*private static CandidatoDAO candidatoDAO = new CandidatoDAO();
     private static BemCandidatoDAO bemCandidatoDAO = new BemCandidatoDAO();
 
     public static void main(String[] args) {
@@ -24,5 +24,5 @@ public class TesteJPA {
         for (BemCandidato bemCandidato: bensCandidatos) {
             System.out.println(bemCandidato);
         }
-    }
+    }*/
 }

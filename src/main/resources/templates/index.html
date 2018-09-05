@@ -13,16 +13,19 @@
                     <tr>
                         <th>Id</th>
                         <th>Nome</th>
+                        <th>Partido</th>
                         <th>Estado</th>
                     </tr>
                 </thead>
                 <tr th:each="candidato : ${candidatos}">
                     <td><span th:text="${candidato.getId()}"></span></td>
                     <td><span th:text="${candidato.getNomeCandidato()}"></span> </td>
+                    <td><span th:text="${candidato.getSiglaPartido()}"></span> </td>
                     <td><span th:text="${candidato.getSiglaUf()}"></span> </td>
                 </tr>
             </table>
         </div>
+        <a href="listabens" class="btn btn-lg btn-primary">Confira a Lista de Bens</a>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

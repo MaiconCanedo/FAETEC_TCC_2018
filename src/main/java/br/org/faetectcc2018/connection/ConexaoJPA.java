@@ -6,9 +6,9 @@ import javax.persistence.Persistence;
 
 public class ConexaoJPA {
 
-    private static EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("dados_publicos-postgres");
+    /*private static EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("dados_publicos-postgres");
 
     public EntityManager getEntityManager() {
         return entityManagerFactory.createEntityManager();
-    }
+    }*/
 }

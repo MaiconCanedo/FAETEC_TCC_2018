@@ -16,7 +16,7 @@ public class BemCandidatoDAO {
     private EntityManager entityManager;
 
     //\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\
-    public ArrayList<BemCandidato> listarTodos(int offset, int limit) throws PersistenceException {
+    /*public ArrayList<BemCandidato> listarTodos(int offset, int limit) throws PersistenceException {
         try {
             entityManager = jpa.getEntityManager();
             TypedQuery<BemCandidato> query = entityManager.createQuery(SELECT, BemCandidato.class);
@@ -36,5 +36,5 @@ public class BemCandidatoDAO {
 
     public ArrayList<BemCandidato> listarTodos() throws PersistenceException {
         return  listarTodos(0);
-    }
+    }*/
 }

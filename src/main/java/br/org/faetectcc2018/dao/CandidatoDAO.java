@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class CandidatoDAO {
 
-    private static final String SELECT = "SELECT c FROM Candidato c";
+    /*private static final String SELECT = "SELECT c FROM Candidato c";
 
     private ConexaoJPA jpa = new ConexaoJPA();
     private EntityManager entityManager;
@@ -36,5 +36,5 @@ public class CandidatoDAO {
 
     public ArrayList<Candidato> listarTodos() {
         return listarTodos(0);
-    }
+    }*/
 }
