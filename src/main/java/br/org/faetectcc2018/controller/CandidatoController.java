@@ -5,8 +5,6 @@ import br.org.faetectcc2018.modelo.Candidato;
 import br.org.faetectcc2018.repository.BemCandidatoRepository;
 import br.org.faetectcc2018.repository.CandidatoPaging;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
