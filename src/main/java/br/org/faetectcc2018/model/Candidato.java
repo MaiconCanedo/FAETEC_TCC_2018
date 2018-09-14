@@ -1,4 +1,4 @@
-package br.org.faetectcc2018.modelo;
+package br.org.faetectcc2018.model;
 
 import javax.persistence.*;
 import java.util.Objects;
