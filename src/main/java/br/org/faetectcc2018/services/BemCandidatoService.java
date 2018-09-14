@@ -5,6 +5,7 @@ import br.org.faetectcc2018.model.Candidato;
 import br.org.faetectcc2018.repositories.BemCandidatoRepository;
 import br.org.faetectcc2018.services.exceptions.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
@@ -23,10 +24,10 @@ public class BemCandidatoService {
         return bemCandidato.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado! Id: " + id + ", Tipo: " + BemCandidato.class.getName()));
     }
 
-    public List<BemCandidato> listar(Integer page){
-        PageRequest pageRequest = new PageRequest(page, 100, Sort.Direction.ASC, "id");
-        List<BemCandidato> bensCandidatos = bemCandidatoRepository.findAll(pageRequest).getContent();
-        if (bensCandidatos.size() == 0) throw new ObjectNotFoundException("Nenhum objeto foi encontrado! Tipo: " + BemCandidato.class.getName());
+    public Page<BemCandidato> listar(Integer page){
+        PageRequest pageRequest = PageRequest.of(page, 100, Sort.Direction.ASC, "id");
+        Page<BemCandidato> bensCandidatos = bemCandidatoRepository.findAll(pageRequest);
+        if (bensCandidatos.getContent().size() == 0) throw new ObjectNotFoundException("Nenhum objeto foi encontrado! Tipo: " + BemCandidato.class.getName());
         return bensCandidatos;
     }
 }
