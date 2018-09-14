@@ -1,35 +1,36 @@
 package br.org.faetectcc2018.controller;
 
-import br.org.faetectcc2018.modelo.BemCandidato;
 import br.org.faetectcc2018.modelo.Candidato;
-import br.org.faetectcc2018.repository.BemCandidatoRepository;
 import br.org.faetectcc2018.repository.CandidatoPaging;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Pageable;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+import java.util.List;
+import java.util.Optional;
+
+@RestController
+@RequestMapping("/candidatos")
 public class CandidatoController {
 
     @Autowired
     private CandidatoPaging candidatoPaging;
 
-    @Autowired
-    private BemCandidatoRepository bemCandidatoRepository;
-
-    @RequestMapping("/")
-    public String listaCandidatos(Model model , Pageable pageable) {
-        Iterable<Candidato> candidatos = candidatoPaging.findAll(pageable);
-        model.addAttribute("candidatos", candidatos);
-        return "index";
+    @RequestMapping(value = "/page/{page}", method = RequestMethod.GET)
+    public ResponseEntity<?> listar(@PathVariable Integer page) {
+        PageRequest pageRequest = new PageRequest(page, 100, Sort.Direction.ASC, "id");
+        List<Candidato> candidatos = candidatoPaging.findAll(pageRequest).getContent();
+        return ResponseEntity.ok().body(candidatos);
     }
 
-    @RequestMapping("listabens")
-    public String listaBens(Model model) {
-        Iterable<BemCandidato> bens = bemCandidatoRepository.findAll();
-        model.addAttribute("bens", bens);
-        return "listabens";
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    public ResponseEntity<?> buscar(@PathVariable Long id) {
+        Optional<Candidato> candidato = candidatoPaging.findById(id);
+        return ResponseEntity.ok().body(candidato.orElse(null));
     }
 }
