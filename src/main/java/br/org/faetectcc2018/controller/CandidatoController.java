@@ -1,7 +1,7 @@
 package br.org.faetectcc2018.controller;
 
 import br.org.faetectcc2018.modelo.Candidato;
-import br.org.faetectcc2018.repository.CandidatoPaging;
+import br.org.faetectcc2018.repository.CandidatoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
@@ -19,18 +19,18 @@ import java.util.Optional;
 public class CandidatoController {
 
     @Autowired
-    private CandidatoPaging candidatoPaging;
+    private CandidatoRepository candidatoRepository;
 
     @RequestMapping(value = "/page/{page}", method = RequestMethod.GET)
     public ResponseEntity<?> listar(@PathVariable Integer page) {
         PageRequest pageRequest = new PageRequest(page, 100, Sort.Direction.ASC, "id");
-        List<Candidato> candidatos = candidatoPaging.findAll(pageRequest).getContent();
+        List<Candidato> candidatos = candidatoRepository.findAll(pageRequest).getContent();
         return ResponseEntity.ok().body(candidatos);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public ResponseEntity<?> buscar(@PathVariable Long id) {
-        Optional<Candidato> candidato = candidatoPaging.findById(id);
+        Optional<Candidato> candidato = candidatoRepository.findById(id);
         return ResponseEntity.ok().body(candidato.orElse(null));
     }
 }
