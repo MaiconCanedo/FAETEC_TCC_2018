@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f74188f3-06d6-4ab6-af58-8af2043d34f6" name="Default Changelist" comment="'Fazendo mais teste'">
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/model/dto/TipoBemCandidato.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/br/org/faetectcc2018/model/dto/TipoBemCandidato.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/controller/BemCandidatoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/controller/BemCandidatoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/model/BemCandidato.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/model/BemCandidato.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/model/Candidato.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/model/Candidato.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/repositories/BemCandidatoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/repositories/BemCandidatoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/services/BemCandidatoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/services/BemCandidatoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/org/faetectcc2018/controller/BemCandidatoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/org/faetectcc2018/controller/BemCandidatoController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/org/faetectcc2018/model/BemCandidato.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/org/faetectcc2018/model/BemCandidato.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/org/faetectcc2018/model/Candidato.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/org/faetectcc2018/model/Candidato.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/org/faetectcc2018/repositories/BemCandidatoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/org/faetectcc2018/repositories/BemCandidatoRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/org/faetectcc2018/services/BemCandidatoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/org/faetectcc2018/services/BemCandidatoService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/org/faetectcc2018/services/CandidatoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/org/faetectcc2018/services/CandidatoService.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -108,27 +110,29 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="3" />
-          <entry key="java" value="13" />
+          <entry key="class" value="5" />
+          <entry key="java" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="3" />
-          <entry key="JAVA" value="13" />
+          <entry key="CLASS" value="5" />
+          <entry key="JAVA" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="class" value="1" />
-          <entry key="java" value="1022" />
+          <entry key="dummy" value="3" />
+          <entry key="java" value="1682" />
           <entry key="properties" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="1022" />
+          <entry key="JAVA" value="1682" />
+          <entry key="PLAIN_TEXT" value="3" />
           <entry key="Properties" value="13" />
         </counts>
       </usages-collector>
@@ -145,6 +149,37 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
               <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/repositories/BemCandidatoRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="156" selection-start-line="11" selection-start-column="156" selection-end-line="11" selection-end-column="156" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/model/dto/TipoBemCandidato.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <folding>
+                <element signature="e#340#341#0" expanded="true" />
+                <element signature="e#369#370#0" expanded="true" />
+                <element signature="e#414#415#0" expanded="true" />
+                <element signature="e#450#451#0" expanded="true" />
+                <element signature="e#325#326#0" expanded="true" />
+                <element signature="e#357#358#0" expanded="true" />
+                <element signature="e#407#408#0" expanded="true" />
+                <element signature="e#449#450#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -174,11 +209,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/controller/BemCandidatoController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
+            <state relative-caret-position="102">
+              <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1261#1262#0" expanded="true" />
+                <element signature="e#1287#1288#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -186,17 +226,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/services/BemCandidatoService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/services/CandidatoService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="171">
+              <caret line="36" column="104" lean-forward="true" selection-start-line="36" selection-start-column="104" selection-end-line="36" selection-end-column="104" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -204,11 +235,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/model/BemCandidato.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="27" column="28" lean-forward="true" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+            <state relative-caret-position="323">
+              <caret line="20" column="43" lean-forward="true" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -217,7 +248,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/model/Candidato.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="174">
-              <caret line="62" column="37" lean-forward="true" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
+              <caret line="62" column="37" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -243,6 +274,7 @@
       <find>codigoEstadoCivil</find>
       <find>CodigoOcu</find>
       <find>data</find>
+      <find>id</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -284,12 +316,14 @@
         <option value="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/Configuracao.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/service/CandidatoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/controller/CandidatoController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/controller/BemCandidatoController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/services/BemCandidatoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/services/CandidatoService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/model/BemCandidato.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/model/Candidato.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/services/BemCandidatoService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/model/BemCandidato.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/repositories/BemCandidatoRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/model/dto/TipoBemCandidato.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/controller/BemCandidatoController.java" />
       </list>
     </option>
   </component>
@@ -387,6 +421,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="faetectcc2018" type="462c0819:PsiDirectoryNode" />
+              <item name="repositories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FAETEC_TCC_2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FAETEC_TCC_2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="faetectcc2018" type="462c0819:PsiDirectoryNode" />
               <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -423,7 +466,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536958130289" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537215814247" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -433,19 +476,19 @@
     <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\maico\IdeaProjects\FAETEC_TCC_2018\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="br.org.faetectcc2018.services" />
+      <recent name="br.org.faetectcc2018.controller" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Maicon\IdeaProjects\FAETEC_TCC_2018\src\main\java\br\org\faetectcc2018\service" />
       <recent name="C:\Users\maico\IdeaProjects\FAETEC_TCC_2018\src\main\resources\templates" />
       <recent name="C:\Users\maico\IdeaProjects\FAETEC_TCC_2018\src\main\resources\static" />
       <recent name="C:\Users\maico\IdeaProjects\FAETEC_TCC_2018\src" />
       <recent name="C:\Users\maico\IdeaProjects\FAETEC_TCC_2018\lib" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="br.org.faetectcc2018.services" />
-      <recent name="br.org.faetectcc2018.controller" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\maico\IdeaProjects\FAETEC_TCC_2018\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -536,7 +579,7 @@
       <workItem from="1536954497647" duration="3907000" />
       <workItem from="1537059837251" duration="341000" />
       <workItem from="1537194683122" duration="3018000" />
-      <workItem from="1537201261358" duration="3144000" />
+      <workItem from="1537201261358" duration="10897000" />
     </task>
     <task id="LOCAL-00001" summary="criando classes dto">
       <created>1535937159451</created>
@@ -570,7 +613,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48292000" />
+    <option name="totallyTimeSpent" value="56045000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -585,7 +628,7 @@
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11311054" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20051414" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Persistence" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -597,14 +640,14 @@
       <window_info anchor="bottom" id="Java Enterprise" order="0" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32802126" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.32536522" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.374502" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.3997344" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.3292683" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.28603104" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.23281597" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.29083666" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3292683" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32802126" />
       <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.3104213" />
@@ -806,7 +849,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/repositories/BemCandidatoRepository.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/repositories/CandidatoRepository.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.0.10.RELEASE/spring-data-commons-2.0.10.RELEASE.jar!/org/springframework/data/domain/AbstractPageRequest.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -831,20 +873,6 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.0.10.RELEASE/spring-data-commons-2.0.10.RELEASE-sources.jar!/org/springframework/data/querydsl/QPageRequest.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.0.10.RELEASE/spring-data-commons-2.0.10.RELEASE-sources.jar!/org/springframework/data/domain/PageRequest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/controller/BemCandidatoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/services/BemCandidatoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/services/CandidatoService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -855,6 +883,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/model/Candidato.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="62" column="37" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.0.10.RELEASE/spring-data-commons-2.0.10.RELEASE.jar!/org/springframework/data/repository/PagingAndSortingRepository.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="82" selection-start-line="12" selection-start-column="82" selection-end-line="12" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/Configuracao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -862,6 +911,13 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.0.10.RELEASE/spring-data-commons-2.0.10.RELEASE-sources.jar!/org/springframework/data/repository/PagingAndSortingRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="31" column="82" lean-forward="true" selection-start-line="31" selection-start-column="82" selection-end-line="31" selection-end-column="82" />
         </state>
       </provider>
     </entry>
@@ -876,24 +932,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/repositories/BemCandidatoRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+        <state relative-caret-position="187">
+          <caret line="11" column="156" selection-start-line="11" selection-start-column="156" selection-end-line="11" selection-end-column="156" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/model/Candidato.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/model/dto/TipoBemCandidato.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="62" column="37" lean-forward="true" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
+        <state relative-caret-position="306">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#340#341#0" expanded="true" />
+            <element signature="e#369#370#0" expanded="true" />
+            <element signature="e#414#415#0" expanded="true" />
+            <element signature="e#450#451#0" expanded="true" />
+            <element signature="e#325#326#0" expanded="true" />
+            <element signature="e#357#358#0" expanded="true" />
+            <element signature="e#407#408#0" expanded="true" />
+            <element signature="e#449#450#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/services/BemCandidatoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="36" column="104" lean-forward="true" selection-start-line="36" selection-start-column="104" selection-end-line="36" selection-end-column="104" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/model/BemCandidato.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="27" column="28" lean-forward="true" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+        <state relative-caret-position="323">
+          <caret line="20" column="43" lean-forward="true" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/org/faetectcc2018/controller/BemCandidatoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1261#1262#0" expanded="true" />
+            <element signature="e#1287#1288#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -29,4 +29,9 @@ public class BemCandidatoController {
     public ResponseEntity<?> buscar(@PathVariable Long id) {
         return ResponseEntity.ok().body(bemCandidatoService.bucar(id));
     }
+
+    @RequestMapping(value = "/tiposdebens")
+    public ResponseEntity<?> listarTipoDeBem() {
+        return ResponseEntity.ok().body(bemCandidatoService.listarTipoDeBem());
+    }
 }

@@ -19,7 +19,7 @@ public class BemCandidato {
     @Column(name = "sq_candidato", length = 11)
     private String sqCandidato;
     @Column(name = "cd_tipo_bem_candidato")
-    private String cdTipoBemCandidato;
+    private Integer cdTipoBemCandidato;
     @Column(name = "ds_tipo_bem_candidato", length = 100)
     private String dsTipoBemCandidato;
     @Column(name = "detalhe_bem")
@@ -97,11 +97,11 @@ public class BemCandidato {
         this.sqCandidato = sqCandidato;
     }
 
-    public String getCdTipoBemCandidato() {
+    public Integer getCdTipoBemCandidato() {
         return cdTipoBemCandidato;
     }
 
-    public void setCdTipoBemCandidato(String cdTipoBemCandidato) {
+    public void setCdTipoBemCandidato(Integer cdTipoBemCandidato) {
         this.cdTipoBemCandidato = cdTipoBemCandidato;
     }
 
