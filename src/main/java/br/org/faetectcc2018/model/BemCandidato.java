@@ -11,21 +11,21 @@ public class BemCandidato {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(name = "ano_eleicao")
-    private String anoEleicao;
-    @Column(name = "descricao_eleicao")
+    private Integer anoEleicao;
+    @Column(name = "descricao_eleicao", length = 70)
     private String descricaoEleicao;
-    @Column(name = "sigla_uf")
+    @Column(name = "sigla_uf", length = 2)
     private String siglaUf;
-    @Column(name = "sq_candidato")
+    @Column(name = "sq_candidato", length = 11)
     private String sqCandidato;
-    @Column(name = "cd_tipo_bem_candidato")
+    @Column(name = "cd_tipo_bem_candidato", length = 2)
     private String cdTipoBemCandidato;
-    @Column(name = "ds_tipo_bem_candidato")
+    @Column(name = "ds_tipo_bem_candidato", length = 100)
     private String dsTipoBemCandidato;
     @Column(name = "detalhe_bem")
     private String detalheBem;
-    @Column(name = "valor_bem")
-    private String valorBem;
+    @Column(name = "valor_bem", length = 10, precision = 2)
+    private Double valorBem;
 
     public BemCandidato() {}
 
@@ -65,11 +65,11 @@ public class BemCandidato {
         this.id = id;
     }
 
-    public String getAnoEleicao() {
+    public Integer getAnoEleicao() {
         return anoEleicao;
     }
 
-    public void setAnoEleicao(String anoEleicao) {
+    public void setAnoEleicao(Integer anoEleicao) {
         this.anoEleicao = anoEleicao;
     }
 
@@ -121,11 +121,11 @@ public class BemCandidato {
         this.detalheBem = detalheBem;
     }
 
-    public String getValorBem() {
+    public Double getValorBem() {
         return valorBem;
     }
 
-    public void setValorBem(String valorBem) {
+    public void setValorBem(Double valorBem) {
         this.valorBem = valorBem;
     }
 }

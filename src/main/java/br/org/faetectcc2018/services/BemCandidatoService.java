@@ -1,7 +1,6 @@
 package br.org.faetectcc2018.services;
 
 import br.org.faetectcc2018.model.BemCandidato;
-import br.org.faetectcc2018.model.Candidato;
 import br.org.faetectcc2018.repositories.BemCandidatoRepository;
 import br.org.faetectcc2018.services.exceptions.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +9,6 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
 
 @Service

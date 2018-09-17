@@ -1,6 +1,7 @@
 package br.org.faetectcc2018.model;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.Objects;
 
 @Entity
@@ -11,25 +12,25 @@ public class Candidato {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(name = "ano_eleicao")
-    private String anoEleicao;
+    private Integer anoEleicao;
     @Column(name = "num_turno")
-    private String numTurno;
-    @Column(name = "descricao_eleicao")
+    private Integer numTurno;
+    @Column(name = "descricao_eleicao",length = 70)
     private String descricaoEleicao;
-    @Column(name = "sigla_uf")
+    @Column(name = "sigla_uf", length = 2)
     private String siglaUf;
-    @Column(name = "sigla_ue")
+    @Column(name = "sigla_ue", length = 5)
     private String siglaUE;
-    @Column(name = "descricao_ue")
+    @Column(name = "descricao_ue", length = 100)
     private String descricaoUE;
     @Column(name = "codigo_cargo")
-    private String codigoCargo;
+    private Integer codigoCargo;
     @Column(name = "descricao_cargo")
     private String descricaoCargo;
     @Column(name = "nome_candidato")
     private String nomeCandidato;
     @Column(name = "sequencial_candidato")
-    private String sequencialCandidato;
+    private Integer sequencialCandidato;
     @Column(name = "numero_candidato")
     private String numeroCandidato;
     @Column(name = "cpf_candidato")
@@ -37,7 +38,7 @@ public class Candidato {
     @Column(name = "nome_urna_candidato")
     private String nomeUrnaCandidato;
     @Column(name = "cod_situacao_candidatura")
-    private String codSituacaoCandidatura;
+    private Integer codSituacaoCandidatura;
     @Column(name = "des_situacao_candidatura")
     private String desSituacaoCandidatura;
     @Column(name = "numero_partido")
@@ -47,7 +48,7 @@ public class Candidato {
     @Column(name = "nome_partido")
     private String nomePartido;
     @Column(name = "codigo_legenda")
-    private String codigoLegenda;
+    private Integer codigoLegenda;
     @Column(name = "sigla_legenda")
     private String siglaLegenda;
     @Column(name = "composicao_legenda")
@@ -55,51 +56,51 @@ public class Candidato {
     @Column(name = "nome_legenda")
     private String nomeLegenda;
     @Column(name = "codigo_ocupacao")
-    private String codigoOcupacao;
+    private Integer codigoOcupacao;
     @Column(name = "descricao_ocupacao")
     private String descricaoOcupacao;
     @Column(name = "data_nascimento")
-    private String dataNascimento;
+    private Date dataNascimento;
     @Column(name = "num_titulo_eleitoral_candidato")
     private String numTituloEleitoralCandidato;
     @Column(name = "idade_data_eleicao")
-    private String idadeDataEleicao;
+    private Integer idadeDataEleicao;
     @Column(name = "codigo_sexo")
-    private String codigoSexo;
+    private Integer codigoSexo;
     @Column(name = "descricao_sexo")
     private String descricaoSexo;
     @Column(name = "cod_grau_instrucao")
-    private String codGrauInstrucao;
+    private Integer codGrauInstrucao;
     @Column(name = "descricao_grau_instrucao")
     private String descricaoGrauInstrucao;
     @Column(name = "codigo_estado_civil")
-    private String codigoEstadoCivil;
+    private Integer codigoEstadoCivil;
     @Column(name = "descricao_estado_civil")
     private String descricaoEstadoCivil;
     @Column(name = "codigo_cor_raca")
-    private String codigoCorRaca;
+    private Integer codigoCorRaca;
     @Column(name = "descricao_cor_raca")
     private String descricaoCorRaca;
     @Column(name = "codigo_nacionalidade")
-    private String codigoNascionalidade;
+    private Integer codigoNascionalidade;
     @Column(name = "descricao_nacionalidade")
     private String descricaoNascionalidade;
     @Column(name = "sigla_uf_nascimento")
     private String siglaUfNascimento;
     @Column(name = "codigo_municipio_nascimento")
-    private String codigoMunicipioNascimento;
+    private Integer codigoMunicipioNascimento;
     @Column(name = "nome_municipio_nascimento")
     private String nomeMunicipioNascimento;
     @Column(name = "despesa_max_campanha")
-    private String despesaMaxCampanha;
+    private Double despesaMaxCampanha;
     @Column(name = "cod_sit_tot_turno")
-    private String codSitTotTurno;
+    private Integer codSitTotTurno;
     @Column(name = "desc_sit_tot_turno")
     private String descSitTotTurno;
     @Column(name = "nm_email")
     private String nmEmail;
     @Column(name = "datahora_geracao")
-    private String dataHoraGeracao;
+    private Date dataHoraGeracao;
 
     public Candidato() {}
 
@@ -176,36 +177,20 @@ public class Candidato {
         this.id = id;
     }
 
-    public String getDescricaoUE() {
-        return descricaoUE;
-    }
-
-    public void setDescricaoUE(String descricaoUE) {
-        this.descricaoUE = descricaoUE;
-    }
-
-    public String getSiglaLegenda() {
-        return siglaLegenda;
-    }
-
-    public void setSiglaLegenda(String siglaLegenda) {
-        this.siglaLegenda = siglaLegenda;
-    }
-
-    public String getAnoEleicao() {
+    public Integer getAnoEleicao() {
         return anoEleicao;
     }
 
-    public void setAnoEleicao(String anoEleicao) {
+    public void setAnoEleicao(Integer anoEleicao) {
         this.anoEleicao = anoEleicao;
     }
 
-    public String getNumTurno() {
+    public Integer getNumTurno() {
         return numTurno;
     }
 
-    public void setNumTurno(String numTruno) {
-        this.numTurno = numTruno;
+    public void setNumTurno(Integer numTurno) {
+        this.numTurno = numTurno;
     }
 
     public String getDescricaoEleicao() {
@@ -232,11 +217,19 @@ public class Candidato {
         this.siglaUE = siglaUE;
     }
 
-    public String getCodigoCargo() {
+    public String getDescricaoUE() {
+        return descricaoUE;
+    }
+
+    public void setDescricaoUE(String descricaoUE) {
+        this.descricaoUE = descricaoUE;
+    }
+
+    public Integer getCodigoCargo() {
         return codigoCargo;
     }
 
-    public void setCodigoCargo(String codigoCargo) {
+    public void setCodigoCargo(Integer codigoCargo) {
         this.codigoCargo = codigoCargo;
     }
 
@@ -256,11 +249,11 @@ public class Candidato {
         this.nomeCandidato = nomeCandidato;
     }
 
-    public String getSequencialCandidato() {
+    public Integer getSequencialCandidato() {
         return sequencialCandidato;
     }
 
-    public void setSequencialCandidato(String sequencialCandidato) {
+    public void setSequencialCandidato(Integer sequencialCandidato) {
         this.sequencialCandidato = sequencialCandidato;
     }
 
@@ -288,11 +281,11 @@ public class Candidato {
         this.nomeUrnaCandidato = nomeUrnaCandidato;
     }
 
-    public String getCodSituacaoCandidatura() {
+    public Integer getCodSituacaoCandidatura() {
         return codSituacaoCandidatura;
     }
 
-    public void setCodSituacaoCandidatura(String codSituacaoCandidatura) {
+    public void setCodSituacaoCandidatura(Integer codSituacaoCandidatura) {
         this.codSituacaoCandidatura = codSituacaoCandidatura;
     }
 
@@ -328,12 +321,20 @@ public class Candidato {
         this.nomePartido = nomePartido;
     }
 
-    public String getCodigoLegenda() {
+    public Integer getCodigoLegenda() {
         return codigoLegenda;
     }
 
-    public void setCodigoLegenda(String codigoLegenda) {
+    public void setCodigoLegenda(Integer codigoLegenda) {
         this.codigoLegenda = codigoLegenda;
+    }
+
+    public String getSiglaLegenda() {
+        return siglaLegenda;
+    }
+
+    public void setSiglaLegenda(String siglaLegenda) {
+        this.siglaLegenda = siglaLegenda;
     }
 
     public String getComposicaoLegenda() {
@@ -352,11 +353,11 @@ public class Candidato {
         this.nomeLegenda = nomeLegenda;
     }
 
-    public String getCodigoOcupacao() {
+    public Integer getCodigoOcupacao() {
         return codigoOcupacao;
     }
 
-    public void setCodigoOcupacao(String codigoOcupacao) {
+    public void setCodigoOcupacao(Integer codigoOcupacao) {
         this.codigoOcupacao = codigoOcupacao;
     }
 
@@ -368,11 +369,11 @@ public class Candidato {
         this.descricaoOcupacao = descricaoOcupacao;
     }
 
-    public String getDataNascimento() {
+    public Date getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(String dataNascimento) {
+    public void setDataNascimento(Date dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 
@@ -384,19 +385,19 @@ public class Candidato {
         this.numTituloEleitoralCandidato = numTituloEleitoralCandidato;
     }
 
-    public String getIdadeDataEleicao() {
+    public Integer getIdadeDataEleicao() {
         return idadeDataEleicao;
     }
 
-    public void setIdadeDataEleicao(String idadeDataEleicao) {
+    public void setIdadeDataEleicao(Integer idadeDataEleicao) {
         this.idadeDataEleicao = idadeDataEleicao;
     }
 
-    public String getCodigoSexo() {
+    public Integer getCodigoSexo() {
         return codigoSexo;
     }
 
-    public void setCodigoSexo(String codigoSexo) {
+    public void setCodigoSexo(Integer codigoSexo) {
         this.codigoSexo = codigoSexo;
     }
 
@@ -408,11 +409,11 @@ public class Candidato {
         this.descricaoSexo = descricaoSexo;
     }
 
-    public String getCodGrauInstrucao() {
+    public Integer getCodGrauInstrucao() {
         return codGrauInstrucao;
     }
 
-    public void setCodGrauInstrucao(String codGrauInstrucao) {
+    public void setCodGrauInstrucao(Integer codGrauInstrucao) {
         this.codGrauInstrucao = codGrauInstrucao;
     }
 
@@ -424,11 +425,11 @@ public class Candidato {
         this.descricaoGrauInstrucao = descricaoGrauInstrucao;
     }
 
-    public String getCodigoEstadoCivil() {
+    public Integer getCodigoEstadoCivil() {
         return codigoEstadoCivil;
     }
 
-    public void setCodigoEstadoCivil(String codigoEstadoCivil) {
+    public void setCodigoEstadoCivil(Integer codigoEstadoCivil) {
         this.codigoEstadoCivil = codigoEstadoCivil;
     }
 
@@ -440,11 +441,11 @@ public class Candidato {
         this.descricaoEstadoCivil = descricaoEstadoCivil;
     }
 
-    public String getCodigoCorRaca() {
+    public Integer getCodigoCorRaca() {
         return codigoCorRaca;
     }
 
-    public void setCodigoCorRaca(String codigoCorRaca) {
+    public void setCodigoCorRaca(Integer codigoCorRaca) {
         this.codigoCorRaca = codigoCorRaca;
     }
 
@@ -456,11 +457,11 @@ public class Candidato {
         this.descricaoCorRaca = descricaoCorRaca;
     }
 
-    public String getCodigoNascionalidade() {
+    public Integer getCodigoNascionalidade() {
         return codigoNascionalidade;
     }
 
-    public void setCodigoNascionalidade(String codigoNascionalidade) {
+    public void setCodigoNascionalidade(Integer codigoNascionalidade) {
         this.codigoNascionalidade = codigoNascionalidade;
     }
 
@@ -480,11 +481,11 @@ public class Candidato {
         this.siglaUfNascimento = siglaUfNascimento;
     }
 
-    public String getCodigoMunicipioNascimento() {
+    public Integer getCodigoMunicipioNascimento() {
         return codigoMunicipioNascimento;
     }
 
-    public void setCodigoMunicipioNascimento(String codigoMunicipioNascimento) {
+    public void setCodigoMunicipioNascimento(Integer codigoMunicipioNascimento) {
         this.codigoMunicipioNascimento = codigoMunicipioNascimento;
     }
 
@@ -496,19 +497,19 @@ public class Candidato {
         this.nomeMunicipioNascimento = nomeMunicipioNascimento;
     }
 
-    public String getDespesaMaxCampanha() {
+    public Double getDespesaMaxCampanha() {
         return despesaMaxCampanha;
     }
 
-    public void setDespesaMaxCampanha(String despesaMaxCampanha) {
+    public void setDespesaMaxCampanha(Double despesaMaxCampanha) {
         this.despesaMaxCampanha = despesaMaxCampanha;
     }
 
-    public String getCodSitTotTurno() {
+    public Integer getCodSitTotTurno() {
         return codSitTotTurno;
     }
 
-    public void setCodSitTotTurno(String codSitTotTurno) {
+    public void setCodSitTotTurno(Integer codSitTotTurno) {
         this.codSitTotTurno = codSitTotTurno;
     }
 
@@ -528,11 +529,11 @@ public class Candidato {
         this.nmEmail = nmEmail;
     }
 
-    public String getDataHoraGeracao() {
+    public Date getDataHoraGeracao() {
         return dataHoraGeracao;
     }
 
-    public void setDataHoraGeracao(String dataHoraGeracao) {
+    public void setDataHoraGeracao(Date dataHoraGeracao) {
         this.dataHoraGeracao = dataHoraGeracao;
     }
 }
