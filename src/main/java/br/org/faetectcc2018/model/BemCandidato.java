@@ -18,7 +18,7 @@ public class BemCandidato {
     private String siglaUf;
     @Column(name = "sq_candidato", length = 11)
     private String sqCandidato;
-    @Column(name = "cd_tipo_bem_candidato", length = 2)
+    @Column(name = "cd_tipo_bem_candidato")
     private String cdTipoBemCandidato;
     @Column(name = "ds_tipo_bem_candidato", length = 100)
     private String dsTipoBemCandidato;

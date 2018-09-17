@@ -25,40 +25,41 @@ public class Candidato {
     private String descricaoUE;
     @Column(name = "codigo_cargo")
     private Integer codigoCargo;
-    @Column(name = "descricao_cargo")
+    @Column(name = "descricao_cargo", length = 80)
     private String descricaoCargo;
-    @Column(name = "nome_candidato")
+    @Column(name = "nome_candidato", length = 1000)
     private String nomeCandidato;
     @Column(name = "sequencial_candidato")
     private Integer sequencialCandidato;
-    @Column(name = "numero_candidato")
+    @Column(name = "numero_candidato", length = 20)
     private String numeroCandidato;
-    @Column(name = "cpf_candidato")
+    @Column(name = "cpf_candidato", length = 14)
     private String cpfCandidato;
-    @Column(name = "nome_urna_candidato")
+    @Column(name = "nome_urna_candidato", length = 50)
     private String nomeUrnaCandidato;
     @Column(name = "cod_situacao_candidatura")
     private Integer codSituacaoCandidatura;
-    @Column(name = "des_situacao_candidatura")
+    @Column(name = "des_situacao_candidatura", length = 100)
     private String desSituacaoCandidatura;
     @Column(name = "numero_partido")
     private String numeroPartido;
     @Column(name = "sigla_partido")
     private String siglaPartido;
-    @Column(name = "nome_partido")
+    @Column(name = "nome_partido", length = 100)
     private String nomePartido;
     @Column(name = "codigo_legenda")
     private Integer codigoLegenda;
     @Column(name = "sigla_legenda")
     private String siglaLegenda;
-    @Column(name = "composicao_legenda")
+    @Column(name = "composicao_legenda", length = 50)
     private String composicaoLegenda;
-    @Column(name = "nome_legenda")
+    @Column(name = "nome_legenda", length = 100)
     private String nomeLegenda;
     @Column(name = "codigo_ocupacao")
     private Integer codigoOcupacao;
     @Column(name = "descricao_ocupacao")
     private String descricaoOcupacao;
+    @Temporal(TemporalType.DATE)
     @Column(name = "data_nascimento")
     private Date dataNascimento;
     @Column(name = "num_titulo_eleitoral_candidato")
@@ -71,33 +72,33 @@ public class Candidato {
     private String descricaoSexo;
     @Column(name = "cod_grau_instrucao")
     private Integer codGrauInstrucao;
-    @Column(name = "descricao_grau_instrucao")
+    @Column(name = "descricao_grau_instrucao", length = 50)
     private String descricaoGrauInstrucao;
     @Column(name = "codigo_estado_civil")
     private Integer codigoEstadoCivil;
-    @Column(name = "descricao_estado_civil")
+    @Column(name = "descricao_estado_civil", length = 50)
     private String descricaoEstadoCivil;
     @Column(name = "codigo_cor_raca")
     private Integer codigoCorRaca;
-    @Column(name = "descricao_cor_raca")
+    @Column(name = "descricao_cor_raca", length = 50)
     private String descricaoCorRaca;
     @Column(name = "codigo_nacionalidade")
     private Integer codigoNascionalidade;
-    @Column(name = "descricao_nacionalidade")
+    @Column(name = "descricao_nacionalidade", length =  50)
     private String descricaoNascionalidade;
-    @Column(name = "sigla_uf_nascimento")
+    @Column(name = "sigla_uf_nascimento", length = 2)
     private String siglaUfNascimento;
     @Column(name = "codigo_municipio_nascimento")
     private Integer codigoMunicipioNascimento;
-    @Column(name = "nome_municipio_nascimento")
+    @Column(name = "nome_municipio_nascimento", length = 50)
     private String nomeMunicipioNascimento;
-    @Column(name = "despesa_max_campanha")
+    @Column(name = "despesa_max_campanha", length = 15, precision = 2)
     private Double despesaMaxCampanha;
     @Column(name = "cod_sit_tot_turno")
     private Integer codSitTotTurno;
-    @Column(name = "desc_sit_tot_turno")
+    @Column(name = "desc_sit_tot_turno", length = 30)
     private String descSitTotTurno;
-    @Column(name = "nm_email")
+    @Column(name = "nm_email", length = 50)
     private String nmEmail;
     @Column(name = "datahora_geracao")
     private Date dataHoraGeracao;
