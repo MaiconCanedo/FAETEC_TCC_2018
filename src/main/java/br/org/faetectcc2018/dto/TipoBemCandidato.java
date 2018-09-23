@@ -1,4 +1,4 @@
-package br.org.faetectcc2018.model.dto;
+package br.org.faetectcc2018.dto;
 
 public class TipoBemCandidato {
 

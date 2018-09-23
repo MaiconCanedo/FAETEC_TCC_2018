@@ -48,8 +48,7 @@ public class BemCandidato {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        BemCandidato that = (BemCandidato) o;
-        return Objects.equals(id, that.id);
+        return Objects.equals(id, ((BemCandidato)o).id);
     }
 
     @Override

@@ -7,22 +7,29 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
 public class CandidatoService {
 
     @Autowired
-    private CandidatoRepository candidatoRepository;
+    private CandidatoRepository repository;
 
-    public Candidato bucar(Long id) {
-        Optional<Candidato> candidato = candidatoRepository.findById(id);
+    public Candidato find(Long id) {
+        Optional<Candidato> candidato = repository.findById(id);
         return candidato.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado! Id: " + id + ", Tipo: " + Candidato.class.getName()));
     }
 
-    public Page<Candidato> listar(Integer page) {
-        PageRequest pageRequest = PageRequest.of(page, 100, Sort.Direction.ASC, "id");
-        Page<Candidato> candidatos = candidatoRepository.findAll(pageRequest);
+    public List<Candidato> findAll() {
+        List<Candidato> candidatos = repository.findAll();
+        if (candidatos.size() == 0) throw new ObjectNotFoundException("Nenhum objeto foi encontrado! Tipo: " + Candidato.class.getName());
+        return candidatos;
+    }
+
+    public Page<Candidato> findPage(Integer page, Integer linesPerPage, String orderBy, String direction) {
+        PageRequest pageRequest = PageRequest.of(page, linesPerPage, Sort.Direction.valueOf(direction), orderBy);
+        Page<Candidato> candidatos = repository.findAll(pageRequest);
         if (candidatos.getContent().size() == 0) throw new ObjectNotFoundException("Nenhum objeto foi encontrado! Tipo: " + Candidato.class.getName());
         return candidatos;
     }

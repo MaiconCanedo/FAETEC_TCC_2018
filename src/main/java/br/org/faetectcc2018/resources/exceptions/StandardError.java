@@ -1,4 +1,4 @@
-package br.org.faetectcc2018.controller.exceptions;
+package br.org.faetectcc2018.resources.exceptions;
 
 import java.io.Serializable;
 

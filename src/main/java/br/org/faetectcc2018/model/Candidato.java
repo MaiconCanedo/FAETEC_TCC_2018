@@ -161,8 +161,7 @@ public class Candidato {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Candidato candidato = (Candidato) o;
-        return Objects.equals(id, candidato.id);
+        return Objects.equals(id, ((Candidato)o).id);
     }
 
     @Override

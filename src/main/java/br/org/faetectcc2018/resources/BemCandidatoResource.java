@@ -1,4 +1,4 @@
-package br.org.faetectcc2018.controller;
+package br.org.faetectcc2018.resources;
 
 import br.org.faetectcc2018.model.BemCandidato;
 import br.org.faetectcc2018.dto.TipoBemCandidato;
@@ -12,14 +12,14 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/benscandidatos")
-public class BemCandidatoController {
+public class BemCandidatoResource {
 
     @Autowired
     private BemCandidatoService service;
 
     @RequestMapping(method = RequestMethod.GET)
     public ResponseEntity<List<BemCandidato>> findAll() {
-        return ResponseEntity.ok().body(service.findAll());
+        return ResponseEntity.ok(service.findAll());
     }
 
     @RequestMapping(value = "/page", method = RequestMethod.GET)
@@ -27,16 +27,16 @@ public class BemCandidatoController {
                                                        @RequestParam(value = "linesPerPage", defaultValue = "24") Integer linesPerPage,
                                                        @RequestParam(value = "orderBy", defaultValue = "id") String orderBy,
                                                        @RequestParam(value = "direction", defaultValue = "ASC") String direction) {
-        return ResponseEntity.ok().body(service.findPage(page, linesPerPage, orderBy, direction));
+        return ResponseEntity.ok(service.findPage(page, linesPerPage, orderBy, direction));
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public ResponseEntity<BemCandidato> find(@PathVariable Long id) {
-        return ResponseEntity.ok().body(service.find(id));
+        return ResponseEntity.ok(service.find(id));
     }
 
     @RequestMapping(value = "/tiposdebens", method = RequestMethod.GET)
     public ResponseEntity<List<TipoBemCandidato>> findTipoDeBem() {
-        return ResponseEntity.ok().body(service.findAllTipoDeBem());
+        return ResponseEntity.ok(service.findAllTipoDeBem());
     }
 }
