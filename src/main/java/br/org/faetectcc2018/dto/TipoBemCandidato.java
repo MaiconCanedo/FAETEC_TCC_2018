@@ -2,30 +2,30 @@ package br.org.faetectcc2018.dto;
 
 public class TipoBemCandidato {
 
-    private Integer codigo;
-    private String descricao;
+    private Integer cdTipoBemCandidato;
+    private String dsTipoBemCandidato;
 
     public TipoBemCandidato() {
     }
 
     public TipoBemCandidato(Integer codigo, String descricao) {
-        this.codigo = codigo;
-        this.descricao = descricao;
+        this.cdTipoBemCandidato = codigo;
+        this.dsTipoBemCandidato = descricao;
     }
 
     public Integer getCodigo() {
-        return codigo;
+        return cdTipoBemCandidato;
     }
 
     public void setCodigo(Integer codigo) {
-        this.codigo = codigo;
+        this.cdTipoBemCandidato = codigo;
     }
 
     public String getDescricao() {
-        return descricao;
+        return dsTipoBemCandidato;
     }
 
     public void setDescricao(String descricao) {
-        this.descricao = descricao;
+        this.dsTipoBemCandidato = descricao;
     }
 }

@@ -23,14 +23,14 @@ public class CandidatoService {
 
     public List<Candidato> findAll() {
         List<Candidato> candidatos = repository.findAll();
-        if (candidatos.size() == 0) throw new ObjectNotFoundException("Nenhum objeto foi encontrado! Tipo: " + Candidato.class.getName());
+        if (candidatos.isEmpty()) throw new ObjectNotFoundException("Nenhum objeto foi encontrado! Tipo: " + Candidato.class.getName());
         return candidatos;
     }
 
     public Page<Candidato> findPage(Integer page, Integer linesPerPage, String orderBy, String direction) {
         PageRequest pageRequest = PageRequest.of(page, linesPerPage, Sort.Direction.valueOf(direction), orderBy);
         Page<Candidato> candidatos = repository.findAll(pageRequest);
-        if (candidatos.getContent().size() == 0) throw new ObjectNotFoundException("Nenhum objeto foi encontrado! Tipo: " + Candidato.class.getName());
+        if (candidatos.getContent().isEmpty()) throw new ObjectNotFoundException("Nenhum objeto foi encontrado! Tipo: " + Candidato.class.getName());
         return candidatos;
     }
 }

@@ -11,6 +11,6 @@ import java.util.List;
 public interface BemCandidatoRepository extends JpaRepository<BemCandidato, Long> {
 
     @Transactional(readOnly = true)
-    @Query("SELECT DISTINCT new br.org.faetectcc2018.dto.TipoBemCandidato(bc.cdTipoBemCandidato, bc.dsTipoBemCandidato) FROM BemCandidato bc ORDER BY bc.dsTipoBemCandidato")
+    @Query("SELECT DISTINCT new br.org.faetectcc2018.dto.TipoBemCandidato(bc.cdTipoBemCandidato, bc.dsTipoBemCandidato) FROM BemCandidato bc ORDER BY bc.dsTipoBemCandidatogi")
     List<TipoBemCandidato> findDistinctByDsTipoBemCandidatoCustom();
 }

@@ -10,21 +10,26 @@ public class BemCandidato {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "ano_eleicao")
+
     private Integer anoEleicao;
-    @Column(name = "descricao_eleicao", length = 70)
+
+    @Column(length = 70)
     private String descricaoEleicao;
-    @Column(name = "sigla_uf", length = 2)
+
+    @Column(length = 2)
     private String siglaUf;
-    @Column(name = "sq_candidato", length = 11)
+
+    @Column(length = 11)
     private String sqCandidato;
-    @Column(name = "cd_tipo_bem_candidato")
+
     private Integer cdTipoBemCandidato;
-    @Column(name = "ds_tipo_bem_candidato", length = 100)
+
+    @Column(length = 100)
     private String dsTipoBemCandidato;
-    @Column(name = "detalhe_bem")
+
     private String detalheBem;
-    @Column(name = "valor_bem", length = 10, precision = 2)
+
+    @Column(length = 10, precision = 2)
     private Double valorBem;
 
     public BemCandidato() {}

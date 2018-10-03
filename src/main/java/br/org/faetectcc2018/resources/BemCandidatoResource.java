@@ -18,11 +18,6 @@ public class BemCandidatoResource {
     private BemCandidatoService service;
 
     @RequestMapping(method = RequestMethod.GET)
-    public ResponseEntity<List<BemCandidato>> findAll() {
-        return ResponseEntity.ok(service.findAll());
-    }
-
-    @RequestMapping(value = "/page", method = RequestMethod.GET)
     public ResponseEntity<Page<BemCandidato>> findPage(@RequestParam(value = "page", defaultValue = "0") Integer page,
                                                        @RequestParam(value = "linesPerPage", defaultValue = "24") Integer linesPerPage,
                                                        @RequestParam(value = "orderBy", defaultValue = "id") String orderBy,

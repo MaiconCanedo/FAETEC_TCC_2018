@@ -26,20 +26,20 @@ public class BemCandidatoService {
 
     public List<BemCandidato> findAll(){
         List<BemCandidato> bensCandidatos = repository.findAll();
-        if (bensCandidatos.size() == 0) throw new ObjectNotFoundException("Nenhum objeto foi encontrado! Tipo: " + BemCandidato.class.getName());
+        if (bensCandidatos.isEmpty()) throw new ObjectNotFoundException("Nenhum objeto foi encontrado! Tipo: " + BemCandidato.class.getName());
         return bensCandidatos;
     }
 
     public Page<BemCandidato> findPage(Integer page, Integer linesPerPage, String orderBy, String direction) {
         PageRequest pageRequest = PageRequest.of(page, linesPerPage, Sort.Direction.valueOf(direction), orderBy);
         Page<BemCandidato> bensCandidatos = repository.findAll(pageRequest);
-        if (bensCandidatos.getContent().size() == 0) throw new ObjectNotFoundException("Nenhum objeto foi encontrado! Tipo: " + BemCandidato.class.getName());
+        if (bensCandidatos.getContent().isEmpty()) throw new ObjectNotFoundException("Nenhum objeto foi encontrado! Tipo: " + BemCandidato.class.getName());
         return bensCandidatos;
     }
 
     public List<TipoBemCandidato> findAllTipoDeBem(){
         List<TipoBemCandidato> tiposDeBens = repository.findDistinctByDsTipoBemCandidatoCustom();
-        if (tiposDeBens.size() == 0) throw new ObjectNotFoundException("Nenhum objeto foi encontrado!");
+        if (tiposDeBens.isEmpty()) throw new ObjectNotFoundException("Nenhum objeto foi encontrado!");
         return tiposDeBens;
     }
 }

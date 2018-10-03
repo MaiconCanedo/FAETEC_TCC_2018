@@ -17,11 +17,6 @@ public class CandidatoResource {
     private CandidatoService service;
 
     @RequestMapping(method = RequestMethod.GET)
-    public ResponseEntity<List<Candidato>> findAll(){
-        return ResponseEntity.ok(service.findAll());
-    }
-
-    @RequestMapping(value = "/page", method = RequestMethod.GET)
     public ResponseEntity<Page<Candidato>> findPage(@RequestParam(value = "page", defaultValue = "0") Integer page,
                                                     @RequestParam(value = "linesPerPage", defaultValue = "24") Integer linesPerPage,
                                                     @RequestParam(value = "orderBy", defaultValue = "id") String orderBy,
