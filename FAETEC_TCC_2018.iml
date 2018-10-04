@@ -36,7 +36,7 @@
     <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="antlr-2.7.7" level="project" />
-    <orderEntry type="library" name="Maven: org.postgresql:postgresql:42.2.4" level="project" />
+    <orderEntry type="library" name="Maven: org.postgresql:postgresql:42.2.5" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-data-jpa:2.0.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:2.0.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-logging:2.0.5.RELEASE" level="project" />
@@ -78,39 +78,15 @@
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.9.6" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.6" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.module:jackson-module-parameter-names:2.9.6" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-tomcat:2.0.5.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-core:8.5.34" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-el:8.5.34" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-websocket:8.5.34" level="project" />
     <orderEntry type="library" name="Maven: org.hibernate.validator:hibernate-validator:6.0.12.Final" level="project" />
     <orderEntry type="library" name="Maven: javax.validation:validation-api:2.0.1.Final" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-web:5.0.9.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:5.0.9.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:5.0.9.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-jetty:2.0.5.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-servlets:9.4.12.v20180830" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-continuation:9.4.12.v20180830" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-http:9.4.12.v20180830" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-util:9.4.12.v20180830" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-io:9.4.12.v20180830" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-webapp:9.4.12.v20180830" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-xml:9.4.12.v20180830" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-servlet:9.4.12.v20180830" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-security:9.4.12.v20180830" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-server:9.4.12.v20180830" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.jetty.websocket:websocket-server:9.4.12.v20180830" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.jetty.websocket:websocket-common:9.4.12.v20180830" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.jetty.websocket:websocket-api:9.4.12.v20180830" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.jetty.websocket:websocket-client:9.4.12.v20180830" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-client:9.4.12.v20180830" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.jetty.websocket:websocket-servlet:9.4.12.v20180830" level="project" />
-    <orderEntry type="library" name="Maven: javax.servlet:javax.servlet-api:3.1.0" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.jetty.websocket:javax-websocket-server-impl:9.4.12.v20180830" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-annotations:9.4.12.v20180830" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-plus:9.4.12.v20180830" level="project" />
-    <orderEntry type="library" name="Maven: org.ow2.asm:asm:6.2" level="project" />
-    <orderEntry type="library" name="Maven: org.ow2.asm:asm-commons:6.2" level="project" />
-    <orderEntry type="library" name="Maven: org.ow2.asm:asm-tree:6.2" level="project" />
-    <orderEntry type="library" name="Maven: org.ow2.asm:asm-analysis:6.2" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.jetty.websocket:javax-websocket-client-impl:9.4.12.v20180830" level="project" />
-    <orderEntry type="library" name="Maven: javax.websocket:javax.websocket-api:1.0" level="project" />
-    <orderEntry type="library" name="Maven: org.mortbay.jasper:apache-el:8.5.33" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-thymeleaf:2.0.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.thymeleaf:thymeleaf-spring5:3.0.9.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.thymeleaf:thymeleaf:3.0.9.RELEASE" level="project" />

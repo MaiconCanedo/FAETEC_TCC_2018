@@ -48,7 +48,7 @@ public class SwaggerConfig {
                 "Versão 1.0",
                 "https://github.com/MaiconCanedo/FAETEC_TCC_2018",
                 new Contact("Maicon Canedo", "https://github.com/MaiconCanedo/FAETEC_TCC_2018.git", "maicon.canedo2013@outlook.com"),
-                "Permitido uso para estudadentes",
+                "Permitido uso para estudantes",
                 "https://github.com/MaiconCanedo/FAETEC_TCC_2018",
                 Collections.emptyList()
         );
