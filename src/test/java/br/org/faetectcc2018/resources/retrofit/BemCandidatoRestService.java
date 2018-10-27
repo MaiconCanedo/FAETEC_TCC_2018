@@ -12,14 +12,14 @@ import java.util.List;
 public interface BemCandidatoRestService {
 
     @GET("/benscandidatos/{id}")
-    Call<BemCandidato> find(@Path(value = "id") Long id);
+    Call<BemCandidato> find(@Path("id") Long id);
 
     @GET("/benscandidatos/tiposdebens")
     Call<List<TipoBemCandidato>> findTipoDeBem();
 
     @GET("/benscandidatos")
     Call<RestPageImpl<BemCandidato>> findPage(@Query("page") Integer page,
-                                              @Query("linesPerPage")Integer linesPerPage,
+                                              @Query("linesPerPage") Integer linesPerPage,
                                               @Query("orderBy") String orderBy,
                                               @Query("direction") String direction);
 }
