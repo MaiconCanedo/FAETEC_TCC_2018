@@ -13,5 +13,5 @@ public interface BemCandidatoRepository extends JpaRepository<BemCandidato, Long
 
     @Transactional(readOnly = true)
     @Query("SELECT DISTINCT new br.org.faetectcc2018.dto.TipoBemCandidato(bc.cdTipoBemCandidato, bc.dsTipoBemCandidato) FROM BemCandidato bc ORDER BY bc.dsTipoBemCandidato")
-    Optional<List<TipoBemCandidato>> findDistinctByDsTipoBemCandidatoCustom();
+    List<TipoBemCandidato> findDistinctByDsTipoBemCandidatoCustom();
 }

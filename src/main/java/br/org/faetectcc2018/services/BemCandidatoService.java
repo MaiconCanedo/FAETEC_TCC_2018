@@ -31,6 +31,6 @@ public class BemCandidatoService {
     }
 
     public Optional<List<TipoBemCandidato>> findAllTipoDeBem() {
-        return repository.findDistinctByDsTipoBemCandidatoCustom();
+        return Optional.ofNullable(repository.findDistinctByDsTipoBemCandidatoCustom());
     }
 }

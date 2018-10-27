@@ -1,5 +1,6 @@
 package br.org.faetectcc2018.resources;
 
+import br.org.faetectcc2018.dto.TipoBemCandidato;
 import br.org.faetectcc2018.model.BemCandidato;
 import br.org.faetectcc2018.resources.retrofit.BemCandidatoRestService;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -9,11 +10,13 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.Page;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import retrofit2.Retrofit;
 import retrofit2.converter.jackson.JacksonConverterFactory;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Optional;
 
 import static org.junit.Assert.*;
@@ -41,16 +44,24 @@ public class BemCandidatoResourceTest {
     }
 
     @Test
-    public void findPage() {
+    public void findPage() throws IOException {
+        Optional<Page<BemCandidato>> bensCandidatos = Optional.ofNullable(bemCandidatoRestService.findPage(0, null, null, null).execute().body());
+
+        assertTrue(bensCandidatos.isPresent());
     }
 
     @Test
     public void find() throws IOException {
         Optional<BemCandidato> bemCandidato = Optional.ofNullable(bemCandidatoRestService.find(1L).execute().body());
+
         assertTrue(bemCandidato.isPresent());
     }
 
     @Test
-    public void findTipoDeBem() {
+    public void findTipoDeBem() throws IOException {
+        Optional<List<TipoBemCandidato>> tipoBemCandidatoList = Optional.ofNullable(bemCandidatoRestService.findTipoDeBem().execute().body());
+
+        assertTrue(tipoBemCandidatoList.isPresent());
+        tipoBemCandidatoList.get().forEach(System.out::println);
     }
 }
