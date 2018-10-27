@@ -3,7 +3,6 @@ package br.org.faetectcc2018.services;
 import br.org.faetectcc2018.model.BemCandidato;
 import br.org.faetectcc2018.dto.TipoBemCandidato;
 import br.org.faetectcc2018.repositories.BemCandidatoRepository;
-import br.org.faetectcc2018.services.exceptions.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -19,27 +18,19 @@ public class BemCandidatoService {
     @Autowired
     private BemCandidatoRepository repository;
 
-    public BemCandidato find(Long id){
-        Optional<BemCandidato> bemCandidato = repository.findById(id);
-        return bemCandidato.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado! Id: " + id + ", Tipo: " + BemCandidato.class.getName()));
+    public Optional<BemCandidato> find(Long id) {
+        return repository.findById(id);
     }
 
-    public List<BemCandidato> findAll(){
-        List<BemCandidato> bensCandidatos = repository.findAll();
-        if (bensCandidatos.isEmpty()) throw new ObjectNotFoundException("Nenhum objeto foi encontrado! Tipo: " + BemCandidato.class.getName());
-        return bensCandidatos;
+    public Optional<List<BemCandidato>> findAll() {
+        return Optional.ofNullable(repository.findAll());
     }
 
-    public Page<BemCandidato> findPage(Integer page, Integer linesPerPage, String orderBy, String direction) {
-        PageRequest pageRequest = PageRequest.of(page, linesPerPage, Sort.Direction.valueOf(direction), orderBy);
-        Page<BemCandidato> bensCandidatos = repository.findAll(pageRequest);
-        if (bensCandidatos.getContent().isEmpty()) throw new ObjectNotFoundException("Nenhum objeto foi encontrado! Tipo: " + BemCandidato.class.getName());
-        return bensCandidatos;
+    public Optional<Page<BemCandidato>> findPage(Integer page, Integer linesPerPage, String orderBy, String direction) {
+        return Optional.ofNullable(repository.findAll(PageRequest.of(page, linesPerPage, Sort.Direction.valueOf(direction), orderBy)));
     }
 
-    public List<TipoBemCandidato> findAllTipoDeBem(){
-        List<TipoBemCandidato> tiposDeBens = repository.findDistinctByDsTipoBemCandidatoCustom();
-        if (tiposDeBens.isEmpty()) throw new ObjectNotFoundException("Nenhum objeto foi encontrado!");
-        return tiposDeBens;
+    public Optional<List<TipoBemCandidato>> findAllTipoDeBem() {
+        return repository.findDistinctByDsTipoBemCandidatoCustom();
     }
 }

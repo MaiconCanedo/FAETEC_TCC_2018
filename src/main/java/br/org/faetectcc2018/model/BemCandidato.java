@@ -2,6 +2,7 @@ package br.org.faetectcc2018.model;
 
 import javax.persistence.*;
 import java.util.Objects;
+import java.util.StringJoiner;
 
 @Entity
 @Table(name = "bens_candidatos")
@@ -36,17 +37,17 @@ public class BemCandidato {
 
     @Override
     public String toString() {
-        return "BemCandidato{" +
-                "id=" + id +
-                ", anoEleicao='" + anoEleicao + '\'' +
-                ", descricaoEleicao='" + descricaoEleicao + '\'' +
-                ", siglaUf='" + siglaUf + '\'' +
-                ", sqCandidato='" + sqCandidato + '\'' +
-                ", cdTipoBemCandidato='" + cdTipoBemCandidato + '\'' +
-                ", dsTipoBemCandidato='" + dsTipoBemCandidato + '\'' +
-                ", detalheBem='" + detalheBem + '\'' +
-                ", valorBem='" + valorBem + '\'' +
-                '}';
+        return new StringJoiner(", ", BemCandidato.class.getSimpleName() + "[", "]")
+                .add("id=" + id)
+                .add("anoEleicao=" + anoEleicao)
+                .add("descricaoEleicao='" + descricaoEleicao + "'")
+                .add("siglaUf='" + siglaUf + "'")
+                .add("sqCandidato='" + sqCandidato + "'")
+                .add("cdTipoBemCandidato=" + cdTipoBemCandidato)
+                .add("dsTipoBemCandidato='" + dsTipoBemCandidato + "'")
+                .add("detalheBem='" + detalheBem + "'")
+                .add("valorBem=" + valorBem)
+                .toString();
     }
 
     @Override

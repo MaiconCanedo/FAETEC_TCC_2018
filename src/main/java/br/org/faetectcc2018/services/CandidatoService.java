@@ -2,7 +2,6 @@ package br.org.faetectcc2018.services;
 
 import br.org.faetectcc2018.model.Candidato;
 import br.org.faetectcc2018.repositories.CandidatoRepository;
-import br.org.faetectcc2018.services.exceptions.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
@@ -16,21 +15,15 @@ public class CandidatoService {
     @Autowired
     private CandidatoRepository repository;
 
-    public Candidato find(Long id) {
-        Optional<Candidato> candidato = repository.findById(id);
-        return candidato.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado! Id: " + id + ", Tipo: " + Candidato.class.getName()));
+    public Optional<Candidato> find(Long id) {
+        return repository.findById(id);
     }
 
-    public List<Candidato> findAll() {
-        List<Candidato> candidatos = repository.findAll();
-        if (candidatos.isEmpty()) throw new ObjectNotFoundException("Nenhum objeto foi encontrado! Tipo: " + Candidato.class.getName());
-        return candidatos;
+    public Optional<List<Candidato>> findAll() {
+        return Optional.ofNullable(repository.findAll());
     }
 
-    public Page<Candidato> findPage(Integer page, Integer linesPerPage, String orderBy, String direction) {
-        PageRequest pageRequest = PageRequest.of(page, linesPerPage, Sort.Direction.valueOf(direction), orderBy);
-        Page<Candidato> candidatos = repository.findAll(pageRequest);
-        if (candidatos.getContent().isEmpty()) throw new ObjectNotFoundException("Nenhum objeto foi encontrado! Tipo: " + Candidato.class.getName());
-        return candidatos;
+    public Optional<Page<Candidato>> findPage(Integer page, Integer linesPerPage, String orderBy, String direction) {
+        return Optional.ofNullable(repository.findAll(PageRequest.of(page, linesPerPage, Sort.Direction.valueOf(direction), orderBy)));
     }
 }

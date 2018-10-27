@@ -1,6 +1,5 @@
 package br.org.faetectcc2018.resources.exceptions;
 
-import br.org.faetectcc2018.services.exceptions.ObjectNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

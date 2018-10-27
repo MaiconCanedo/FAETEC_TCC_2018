@@ -1,4 +1,4 @@
-package br.org.faetectcc2018.services.exceptions;
+package br.org.faetectcc2018.resources.exceptions;
 
 public class ObjectNotFoundException extends RuntimeException {
 
