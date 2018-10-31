@@ -3,8 +3,6 @@ package br.org.faetectcc2018.model;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.Date;
-import java.util.Objects;
 
 @Entity
 public class Candidato {
@@ -22,7 +20,7 @@ public class Candidato {
     private String dsEleicao;
     private LocalDate dtEleicao;
     private String tpAbrangencia;
-    private String sqUf;
+    private String sgUf;
     private String sgUe;
     private String nmUe;
     private Integer cdCargo;
@@ -159,12 +157,12 @@ public class Candidato {
         this.tpAbrangencia = tpAbrangencia;
     }
 
-    public String getSqUf() {
-        return sqUf;
+    public String getSgUf() {
+        return sgUf;
     }
 
-    public void setSqUf(String sqUf) {
-        this.sqUf = sqUf;
+    public void setSgUf(String sgUf) {
+        this.sgUf = sgUf;
     }
 
     public String getSgUe() {
