@@ -1,173 +1,75 @@
 package br.org.faetectcc2018.model;
 
 import javax.persistence.*;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.Date;
 import java.util.Objects;
 
 @Entity
-@Table(name = "candidatos")
 public class Candidato {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "ano_eleicao")
+    private LocalDate dtGeracao;
+    private LocalTime hhGeracao;
     private Integer anoEleicao;
-    @Column(name = "num_turno")
-    private Integer numTurno;
-    @Column(name = "descricao_eleicao",length = 70)
-    private String descricaoEleicao;
-    @Column(name = "sigla_uf", length = 2)
-    private String siglaUf;
-    @Column(name = "sigla_ue", length = 5)
-    private String siglaUE;
-    @Column(name = "descricao_ue", length = 100)
-    private String descricaoUE;
-    @Column(name = "codigo_cargo")
-    private Integer codigoCargo;
-    @Column(name = "descricao_cargo", length = 80)
-    private String descricaoCargo;
-    @Column(name = "nome_candidato", length = 1000)
-    private String nomeCandidato;
-    @Column(name = "sequencial_candidato")
-    private Integer sequencialCandidato;
-    @Column(name = "numero_candidato", length = 20)
-    private String numeroCandidato;
-    @Column(name = "cpf_candidato", length = 14)
-    private String cpfCandidato;
-    @Column(name = "nome_urna_candidato", length = 50)
-    private String nomeUrnaCandidato;
-    @Column(name = "cod_situacao_candidatura")
-    private Integer codSituacaoCandidatura;
-    @Column(name = "des_situacao_candidatura", length = 100)
-    private String desSituacaoCandidatura;
-    @Column(name = "numero_partido")
-    private String numeroPartido;
-    @Column(name = "sigla_partido")
-    private String siglaPartido;
-    @Column(name = "nome_partido", length = 100)
-    private String nomePartido;
-    @Column(name = "codigo_legenda")
-    private Integer codigoLegenda;
-    @Column(name = "sigla_legenda")
-    private String siglaLegenda;
-    @Column(name = "composicao_legenda", length = 50)
-    private String composicaoLegenda;
-    @Column(name = "nome_legenda", length = 100)
-    private String nomeLegenda;
-    @Column(name = "codigo_ocupacao")
-    private Integer codigoOcupacao;
-    @Column(name = "descricao_ocupacao")
-    private String descricaoOcupacao;
-    @Temporal(TemporalType.DATE)
-    @Column(name = "data_nascimento")
-    private Date dataNascimento;
-    @Column(name = "num_titulo_eleitoral_candidato")
-    private String numTituloEleitoralCandidato;
-    @Column(name = "idade_data_eleicao")
-    private Integer idadeDataEleicao;
-    @Column(name = "codigo_sexo")
-    private Integer codigoSexo;
-    @Column(name = "descricao_sexo")
-    private String descricaoSexo;
-    @Column(name = "cod_grau_instrucao")
-    private Integer codGrauInstrucao;
-    @Column(name = "descricao_grau_instrucao", length = 50)
-    private String descricaoGrauInstrucao;
-    @Column(name = "codigo_estado_civil")
-    private Integer codigoEstadoCivil;
-    @Column(name = "descricao_estado_civil", length = 50)
-    private String descricaoEstadoCivil;
-    @Column(name = "codigo_cor_raca")
-    private Integer codigoCorRaca;
-    @Column(name = "descricao_cor_raca", length = 50)
-    private String descricaoCorRaca;
-    @Column(name = "codigo_nacionalidade")
-    private Integer codigoNascionalidade;
-    @Column(name = "descricao_nacionalidade", length =  50)
-    private String descricaoNascionalidade;
-    @Column(name = "sigla_uf_nascimento", length = 2)
-    private String siglaUfNascimento;
-    @Column(name = "codigo_municipio_nascimento")
-    private Integer codigoMunicipioNascimento;
-    @Column(name = "nome_municipio_nascimento", length = 50)
-    private String nomeMunicipioNascimento;
-    @Column(name = "despesa_max_campanha", length = 15, precision = 2)
-    private Double despesaMaxCampanha;
-    @Column(name = "cod_sit_tot_turno")
-    private Integer codSitTotTurno;
-    @Column(name = "desc_sit_tot_turno", length = 30)
-    private String descSitTotTurno;
-    @Column(name = "nm_email", length = 50)
+    private Integer cdTipoEleicao;
+    private String nmTipoEleicao;
+    private Integer nrTurno;
+    private Integer cdEleicao;
+    private String dsEleicao;
+    private LocalDate dtEleicao;
+    private String tpAbrangencia;
+    private String sqUf;
+    private String sgUe;
+    private String nmUe;
+    private Integer cdCargo;
+    private String dsCargo;
+    private String sqCandidato;
+    private String nrCandidato;
+    private String nmCandidato;
+    private String nmUrnaCandidato;
+    private String nmSocialCandidato;
+    private String nrCpfCandidato;
     private String nmEmail;
-    @Column(name = "datahora_geracao")
-    private Date dataHoraGeracao;
-
-    public Candidato() {}
-
-    @Override
-    public String toString() {
-        return "Candidato{" +
-                "id=" + id +
-                ", anoEleicao='" + anoEleicao + '\'' +
-                ", numTurno='" + numTurno + '\'' +
-                ", descricaoEleicao='" + descricaoEleicao + '\'' +
-                ", siglaUf='" + siglaUf + '\'' +
-                ", siglaUE='" + siglaUE + '\'' +
-                ", descricaoUE='" + descricaoUE + '\'' +
-                ", codigoCargo='" + codigoCargo + '\'' +
-                ", descricaoCargo='" + descricaoCargo + '\'' +
-                ", nomeCandidato='" + nomeCandidato + '\'' +
-                ", sequencialCandidato='" + sequencialCandidato + '\'' +
-                ", numeroCandidato='" + numeroCandidato + '\'' +
-                ", cpfCandidato='" + cpfCandidato + '\'' +
-                ", nomeUrnaCandidato='" + nomeUrnaCandidato + '\'' +
-                ", codSituacaoCandidatura='" + codSituacaoCandidatura + '\'' +
-                ", desSituacaoCandidatura='" + desSituacaoCandidatura + '\'' +
-                ", numeroPartido='" + numeroPartido + '\'' +
-                ", siglaPartido='" + siglaPartido + '\'' +
-                ", nomePartido='" + nomePartido + '\'' +
-                ", codigoLegenda='" + codigoLegenda + '\'' +
-                ", siglaLegenda='" + siglaLegenda + '\'' +
-                ", composicaoLegenda='" + composicaoLegenda + '\'' +
-                ", nomeLegenda='" + nomeLegenda + '\'' +
-                ", codigoOcupacao='" + codigoOcupacao + '\'' +
-                ", descricaoOcupacao='" + descricaoOcupacao + '\'' +
-                ", dataNascimento='" + dataNascimento + '\'' +
-                ", numTituloEleitoralCandidato='" + numTituloEleitoralCandidato + '\'' +
-                ", idadeDataEleicao='" + idadeDataEleicao + '\'' +
-                ", codigoSexo='" + codigoSexo + '\'' +
-                ", descricaoSexo='" + descricaoSexo + '\'' +
-                ", codGrauInstrucao='" + codGrauInstrucao + '\'' +
-                ", descricaoGrauInstrucao='" + descricaoGrauInstrucao + '\'' +
-                ", codigoEstadoCivil='" + codigoEstadoCivil + '\'' +
-                ", descricaoEstadoCivil='" + descricaoEstadoCivil + '\'' +
-                ", codigoCorRaca='" + codigoCorRaca + '\'' +
-                ", descricaoCorRaca='" + descricaoCorRaca + '\'' +
-                ", codigoNascionalidade='" + codigoNascionalidade + '\'' +
-                ", descricaoNascionalidade='" + descricaoNascionalidade + '\'' +
-                ", siglaUfNascimento='" + siglaUfNascimento + '\'' +
-                ", codigoMunicipioNascimento='" + codigoMunicipioNascimento + '\'' +
-                ", nomeMunicipioNascimento='" + nomeMunicipioNascimento + '\'' +
-                ", despesaMaxCampanha='" + despesaMaxCampanha + '\'' +
-                ", codSitTotTurno='" + codSitTotTurno + '\'' +
-                ", descSitTotTurno='" + descSitTotTurno + '\'' +
-                ", nmEmail='" + nmEmail + '\'' +
-                ", dataHoraGeracao='" + dataHoraGeracao + '\'' +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        return Objects.equals(id, ((Candidato)o).id);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
-    }
+    private Integer cdSituacaoCandidatura;
+    private String dsSituacaoCandidatura;
+    private Integer cdDetalheSituacaoCand;
+    private String dsDetalheSituacaoCand;
+    private String tpAgremiacao;
+    private Integer nrPartido;
+    private String sgPartido;
+    private String nmPartido;
+    private String sqColigacao;
+    private String nmColigacao;
+    private String dsComposicaoColigacao;
+    private Integer cdNacionalidade;
+    private String dsNacionalidade;
+    private String sgUfNascimento;
+    private Integer cdMunicipioNascimento;
+    private String nmMunicipioNascimento;
+    private LocalDate dtNascimento;
+    private Integer nrIdadeDataPosse;
+    private String nrTituloEleitoralCandidato;
+    private Integer cdGenero;
+    private String dsGenero;
+    private Integer cdGrauInstrucao;
+    private String dsGrauInstrucao;
+    private Integer cdEstadoCivil;
+    private String dsEstadoCivil;
+    private Integer cdCorRaca;
+    private String dsCorRaca;
+    private Integer cdOcupacao;
+    private String dsOcupacao;
+    private Integer nrDespesaMaxCampanha;
+    private Integer cdSitTotTurno;
+    private String dsSitTotTurno;
+    private String stReeleicao;
+    private String stDeclararBens;
+    private Integer nrProtocoloCandidatura;
+    private Long nrProcesso;
 
     public Long getId() {
         return id;
@@ -175,6 +77,22 @@ public class Candidato {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public LocalDate getDtGeracao() {
+        return dtGeracao;
+    }
+
+    public void setDtGeracao(LocalDate dtGeracao) {
+        this.dtGeracao = dtGeracao;
+    }
+
+    public LocalTime getHhGeracao() {
+        return hhGeracao;
+    }
+
+    public void setHhGeracao(LocalTime hhGeracao) {
+        this.hhGeracao = hhGeracao;
     }
 
     public Integer getAnoEleicao() {
@@ -185,340 +103,148 @@ public class Candidato {
         this.anoEleicao = anoEleicao;
     }
 
-    public Integer getNumTurno() {
-        return numTurno;
+    public Integer getCdTipoEleicao() {
+        return cdTipoEleicao;
     }
 
-    public void setNumTurno(Integer numTurno) {
-        this.numTurno = numTurno;
+    public void setCdTipoEleicao(Integer cdTipoEleicao) {
+        this.cdTipoEleicao = cdTipoEleicao;
     }
 
-    public String getDescricaoEleicao() {
-        return descricaoEleicao;
+    public String getNmTipoEleicao() {
+        return nmTipoEleicao;
     }
 
-    public void setDescricaoEleicao(String descricaoEleicao) {
-        this.descricaoEleicao = descricaoEleicao;
+    public void setNmTipoEleicao(String nmTipoEleicao) {
+        this.nmTipoEleicao = nmTipoEleicao;
     }
 
-    public String getSiglaUf() {
-        return siglaUf;
+    public Integer getNrTurno() {
+        return nrTurno;
     }
 
-    public void setSiglaUf(String siglaUf) {
-        this.siglaUf = siglaUf;
+    public void setNrTurno(Integer nrTurno) {
+        this.nrTurno = nrTurno;
     }
 
-    public String getSiglaUE() {
-        return siglaUE;
+    public Integer getCdEleicao() {
+        return cdEleicao;
     }
 
-    public void setSiglaUE(String siglaUE) {
-        this.siglaUE = siglaUE;
+    public void setCdEleicao(Integer cdEleicao) {
+        this.cdEleicao = cdEleicao;
     }
 
-    public String getDescricaoUE() {
-        return descricaoUE;
+    public String getDsEleicao() {
+        return dsEleicao;
     }
 
-    public void setDescricaoUE(String descricaoUE) {
-        this.descricaoUE = descricaoUE;
+    public void setDsEleicao(String dsEleicao) {
+        this.dsEleicao = dsEleicao;
     }
 
-    public Integer getCodigoCargo() {
-        return codigoCargo;
+    public LocalDate getDtEleicao() {
+        return dtEleicao;
     }
 
-    public void setCodigoCargo(Integer codigoCargo) {
-        this.codigoCargo = codigoCargo;
+    public void setDtEleicao(LocalDate dtEleicao) {
+        this.dtEleicao = dtEleicao;
     }
 
-    public String getDescricaoCargo() {
-        return descricaoCargo;
+    public String getTpAbrangencia() {
+        return tpAbrangencia;
     }
 
-    public void setDescricaoCargo(String descricaoCargo) {
-        this.descricaoCargo = descricaoCargo;
+    public void setTpAbrangencia(String tpAbrangencia) {
+        this.tpAbrangencia = tpAbrangencia;
     }
 
-    public String getNomeCandidato() {
-        return nomeCandidato;
+    public String getSqUf() {
+        return sqUf;
     }
 
-    public void setNomeCandidato(String nomeCandidato) {
-        this.nomeCandidato = nomeCandidato;
+    public void setSqUf(String sqUf) {
+        this.sqUf = sqUf;
     }
 
-    public Integer getSequencialCandidato() {
-        return sequencialCandidato;
+    public String getSgUe() {
+        return sgUe;
     }
 
-    public void setSequencialCandidato(Integer sequencialCandidato) {
-        this.sequencialCandidato = sequencialCandidato;
+    public void setSgUe(String sgUe) {
+        this.sgUe = sgUe;
     }
 
-    public String getNumeroCandidato() {
-        return numeroCandidato;
+    public String getNmUe() {
+        return nmUe;
     }
 
-    public void setNumeroCandidato(String numeroCandidato) {
-        this.numeroCandidato = numeroCandidato;
+    public void setNmUe(String nmUe) {
+        this.nmUe = nmUe;
     }
 
-    public String getCpfCandidato() {
-        return cpfCandidato;
+    public Integer getCdCargo() {
+        return cdCargo;
     }
 
-    public void setCpfCandidato(String cpfCandidato) {
-        this.cpfCandidato = cpfCandidato;
+    public void setCdCargo(Integer cdCargo) {
+        this.cdCargo = cdCargo;
     }
 
-    public String getNomeUrnaCandidato() {
-        return nomeUrnaCandidato;
+    public String getDsCargo() {
+        return dsCargo;
     }
 
-    public void setNomeUrnaCandidato(String nomeUrnaCandidato) {
-        this.nomeUrnaCandidato = nomeUrnaCandidato;
+    public void setDsCargo(String dsCargo) {
+        this.dsCargo = dsCargo;
     }
 
-    public Integer getCodSituacaoCandidatura() {
-        return codSituacaoCandidatura;
+    public String getSqCandidato() {
+        return sqCandidato;
     }
 
-    public void setCodSituacaoCandidatura(Integer codSituacaoCandidatura) {
-        this.codSituacaoCandidatura = codSituacaoCandidatura;
+    public void setSqCandidato(String sqCandidato) {
+        this.sqCandidato = sqCandidato;
     }
 
-    public String getDesSituacaoCandidatura() {
-        return desSituacaoCandidatura;
+    public String getNrCandidato() {
+        return nrCandidato;
     }
 
-    public void setDesSituacaoCandidatura(String desSituacaoCandidatura) {
-        this.desSituacaoCandidatura = desSituacaoCandidatura;
+    public void setNrCandidato(String nrCandidato) {
+        this.nrCandidato = nrCandidato;
     }
 
-    public String getNumeroPartido() {
-        return numeroPartido;
+    public String getNmCandidato() {
+        return nmCandidato;
     }
 
-    public void setNumeroPartido(String numeroPartido) {
-        this.numeroPartido = numeroPartido;
+    public void setNmCandidato(String nmCandidato) {
+        this.nmCandidato = nmCandidato;
     }
 
-    public String getSiglaPartido() {
-        return siglaPartido;
+    public String getNmUrnaCandidato() {
+        return nmUrnaCandidato;
     }
 
-    public void setSiglaPartido(String siglaPartido) {
-        this.siglaPartido = siglaPartido;
+    public void setNmUrnaCandidato(String nmUrnaCandidato) {
+        this.nmUrnaCandidato = nmUrnaCandidato;
     }
 
-    public String getNomePartido() {
-        return nomePartido;
+    public String getNmSocialCandidato() {
+        return nmSocialCandidato;
     }
 
-    public void setNomePartido(String nomePartido) {
-        this.nomePartido = nomePartido;
+    public void setNmSocialCandidato(String nmSocialCandidato) {
+        this.nmSocialCandidato = nmSocialCandidato;
     }
 
-    public Integer getCodigoLegenda() {
-        return codigoLegenda;
+    public String getNrCpfCandidato() {
+        return nrCpfCandidato;
     }
 
-    public void setCodigoLegenda(Integer codigoLegenda) {
-        this.codigoLegenda = codigoLegenda;
-    }
-
-    public String getSiglaLegenda() {
-        return siglaLegenda;
-    }
-
-    public void setSiglaLegenda(String siglaLegenda) {
-        this.siglaLegenda = siglaLegenda;
-    }
-
-    public String getComposicaoLegenda() {
-        return composicaoLegenda;
-    }
-
-    public void setComposicaoLegenda(String composicaoLegenda) {
-        this.composicaoLegenda = composicaoLegenda;
-    }
-
-    public String getNomeLegenda() {
-        return nomeLegenda;
-    }
-
-    public void setNomeLegenda(String nomeLegenda) {
-        this.nomeLegenda = nomeLegenda;
-    }
-
-    public Integer getCodigoOcupacao() {
-        return codigoOcupacao;
-    }
-
-    public void setCodigoOcupacao(Integer codigoOcupacao) {
-        this.codigoOcupacao = codigoOcupacao;
-    }
-
-    public String getDescricaoOcupacao() {
-        return descricaoOcupacao;
-    }
-
-    public void setDescricaoOcupacao(String descricaoOcupacao) {
-        this.descricaoOcupacao = descricaoOcupacao;
-    }
-
-    public Date getDataNascimento() {
-        return dataNascimento;
-    }
-
-    public void setDataNascimento(Date dataNascimento) {
-        this.dataNascimento = dataNascimento;
-    }
-
-    public String getNumTituloEleitoralCandidato() {
-        return numTituloEleitoralCandidato;
-    }
-
-    public void setNumTituloEleitoralCandidato(String numTituloEleitoralCandidato) {
-        this.numTituloEleitoralCandidato = numTituloEleitoralCandidato;
-    }
-
-    public Integer getIdadeDataEleicao() {
-        return idadeDataEleicao;
-    }
-
-    public void setIdadeDataEleicao(Integer idadeDataEleicao) {
-        this.idadeDataEleicao = idadeDataEleicao;
-    }
-
-    public Integer getCodigoSexo() {
-        return codigoSexo;
-    }
-
-    public void setCodigoSexo(Integer codigoSexo) {
-        this.codigoSexo = codigoSexo;
-    }
-
-    public String getDescricaoSexo() {
-        return descricaoSexo;
-    }
-
-    public void setDescricaoSexo(String descricaoSexo) {
-        this.descricaoSexo = descricaoSexo;
-    }
-
-    public Integer getCodGrauInstrucao() {
-        return codGrauInstrucao;
-    }
-
-    public void setCodGrauInstrucao(Integer codGrauInstrucao) {
-        this.codGrauInstrucao = codGrauInstrucao;
-    }
-
-    public String getDescricaoGrauInstrucao() {
-        return descricaoGrauInstrucao;
-    }
-
-    public void setDescricaoGrauInstrucao(String descricaoGrauInstrucao) {
-        this.descricaoGrauInstrucao = descricaoGrauInstrucao;
-    }
-
-    public Integer getCodigoEstadoCivil() {
-        return codigoEstadoCivil;
-    }
-
-    public void setCodigoEstadoCivil(Integer codigoEstadoCivil) {
-        this.codigoEstadoCivil = codigoEstadoCivil;
-    }
-
-    public String getDescricaoEstadoCivil() {
-        return descricaoEstadoCivil;
-    }
-
-    public void setDescricaoEstadoCivil(String descricaoEstadoCivil) {
-        this.descricaoEstadoCivil = descricaoEstadoCivil;
-    }
-
-    public Integer getCodigoCorRaca() {
-        return codigoCorRaca;
-    }
-
-    public void setCodigoCorRaca(Integer codigoCorRaca) {
-        this.codigoCorRaca = codigoCorRaca;
-    }
-
-    public String getDescricaoCorRaca() {
-        return descricaoCorRaca;
-    }
-
-    public void setDescricaoCorRaca(String descricaoCorRaca) {
-        this.descricaoCorRaca = descricaoCorRaca;
-    }
-
-    public Integer getCodigoNascionalidade() {
-        return codigoNascionalidade;
-    }
-
-    public void setCodigoNascionalidade(Integer codigoNascionalidade) {
-        this.codigoNascionalidade = codigoNascionalidade;
-    }
-
-    public String getDescricaoNascionalidade() {
-        return descricaoNascionalidade;
-    }
-
-    public void setDescricaoNascionalidade(String descricaoNascionalidade) {
-        this.descricaoNascionalidade = descricaoNascionalidade;
-    }
-
-    public String getSiglaUfNascimento() {
-        return siglaUfNascimento;
-    }
-
-    public void setSiglaUfNascimento(String siglaUfNascimento) {
-        this.siglaUfNascimento = siglaUfNascimento;
-    }
-
-    public Integer getCodigoMunicipioNascimento() {
-        return codigoMunicipioNascimento;
-    }
-
-    public void setCodigoMunicipioNascimento(Integer codigoMunicipioNascimento) {
-        this.codigoMunicipioNascimento = codigoMunicipioNascimento;
-    }
-
-    public String getNomeMunicipioNascimento() {
-        return nomeMunicipioNascimento;
-    }
-
-    public void setNomeMunicipioNascimento(String nomeMunicipioNascimento) {
-        this.nomeMunicipioNascimento = nomeMunicipioNascimento;
-    }
-
-    public Double getDespesaMaxCampanha() {
-        return despesaMaxCampanha;
-    }
-
-    public void setDespesaMaxCampanha(Double despesaMaxCampanha) {
-        this.despesaMaxCampanha = despesaMaxCampanha;
-    }
-
-    public Integer getCodSitTotTurno() {
-        return codSitTotTurno;
-    }
-
-    public void setCodSitTotTurno(Integer codSitTotTurno) {
-        this.codSitTotTurno = codSitTotTurno;
-    }
-
-    public String getDescSitTotTurno() {
-        return descSitTotTurno;
-    }
-
-    public void setDescSitTotTurno(String descSitTotTurno) {
-        this.descSitTotTurno = descSitTotTurno;
+    public void setNrCpfCandidato(String nrCpfCandidato) {
+        this.nrCpfCandidato = nrCpfCandidato;
     }
 
     public String getNmEmail() {
@@ -529,11 +255,291 @@ public class Candidato {
         this.nmEmail = nmEmail;
     }
 
-    public Date getDataHoraGeracao() {
-        return dataHoraGeracao;
+    public Integer getCdSituacaoCandidatura() {
+        return cdSituacaoCandidatura;
     }
 
-    public void setDataHoraGeracao(Date dataHoraGeracao) {
-        this.dataHoraGeracao = dataHoraGeracao;
+    public void setCdSituacaoCandidatura(Integer cdSituacaoCandidatura) {
+        this.cdSituacaoCandidatura = cdSituacaoCandidatura;
+    }
+
+    public String getDsSituacaoCandidatura() {
+        return dsSituacaoCandidatura;
+    }
+
+    public void setDsSituacaoCandidatura(String dsSituacaoCandidatura) {
+        this.dsSituacaoCandidatura = dsSituacaoCandidatura;
+    }
+
+    public Integer getCdDetalheSituacaoCand() {
+        return cdDetalheSituacaoCand;
+    }
+
+    public void setCdDetalheSituacaoCand(Integer cdDetalheSituacaoCand) {
+        this.cdDetalheSituacaoCand = cdDetalheSituacaoCand;
+    }
+
+    public String getDsDetalheSituacaoCand() {
+        return dsDetalheSituacaoCand;
+    }
+
+    public void setDsDetalheSituacaoCand(String dsDetalheSituacaoCand) {
+        this.dsDetalheSituacaoCand = dsDetalheSituacaoCand;
+    }
+
+    public String getTpAgremiacao() {
+        return tpAgremiacao;
+    }
+
+    public void setTpAgremiacao(String tpAgremiacao) {
+        this.tpAgremiacao = tpAgremiacao;
+    }
+
+    public Integer getNrPartido() {
+        return nrPartido;
+    }
+
+    public void setNrPartido(Integer nrPartido) {
+        this.nrPartido = nrPartido;
+    }
+
+    public String getSgPartido() {
+        return sgPartido;
+    }
+
+    public void setSgPartido(String sgPartido) {
+        this.sgPartido = sgPartido;
+    }
+
+    public String getNmPartido() {
+        return nmPartido;
+    }
+
+    public void setNmPartido(String nmPartido) {
+        this.nmPartido = nmPartido;
+    }
+
+    public String getSqColigacao() {
+        return sqColigacao;
+    }
+
+    public void setSqColigacao(String sqColigacao) {
+        this.sqColigacao = sqColigacao;
+    }
+
+    public String getNmColigacao() {
+        return nmColigacao;
+    }
+
+    public void setNmColigacao(String nmColigacao) {
+        this.nmColigacao = nmColigacao;
+    }
+
+    public String getDsComposicaoColigacao() {
+        return dsComposicaoColigacao;
+    }
+
+    public void setDsComposicaoColigacao(String dsComposicaoColigacao) {
+        this.dsComposicaoColigacao = dsComposicaoColigacao;
+    }
+
+    public Integer getCdNacionalidade() {
+        return cdNacionalidade;
+    }
+
+    public void setCdNacionalidade(Integer cdNacionalidade) {
+        this.cdNacionalidade = cdNacionalidade;
+    }
+
+    public String getDsNacionalidade() {
+        return dsNacionalidade;
+    }
+
+    public void setDsNacionalidade(String dsNacionalidade) {
+        this.dsNacionalidade = dsNacionalidade;
+    }
+
+    public String getSgUfNascimento() {
+        return sgUfNascimento;
+    }
+
+    public void setSgUfNascimento(String sgUfNascimento) {
+        this.sgUfNascimento = sgUfNascimento;
+    }
+
+    public Integer getCdMunicipioNascimento() {
+        return cdMunicipioNascimento;
+    }
+
+    public void setCdMunicipioNascimento(Integer cdMunicipioNascimento) {
+        this.cdMunicipioNascimento = cdMunicipioNascimento;
+    }
+
+    public String getNmMunicipioNascimento() {
+        return nmMunicipioNascimento;
+    }
+
+    public void setNmMunicipioNascimento(String nmMunicipioNascimento) {
+        this.nmMunicipioNascimento = nmMunicipioNascimento;
+    }
+
+    public LocalDate getDtNascimento() {
+        return dtNascimento;
+    }
+
+    public void setDtNascimento(LocalDate dtNascimento) {
+        this.dtNascimento = dtNascimento;
+    }
+
+    public Integer getNrIdadeDataPosse() {
+        return nrIdadeDataPosse;
+    }
+
+    public void setNrIdadeDataPosse(Integer nrIdadeDataPosse) {
+        this.nrIdadeDataPosse = nrIdadeDataPosse;
+    }
+
+    public String getNrTituloEleitoralCandidato() {
+        return nrTituloEleitoralCandidato;
+    }
+
+    public void setNrTituloEleitoralCandidato(String nrTituloEleitoralCandidato) {
+        this.nrTituloEleitoralCandidato = nrTituloEleitoralCandidato;
+    }
+
+    public Integer getCdGenero() {
+        return cdGenero;
+    }
+
+    public void setCdGenero(Integer cdGenero) {
+        this.cdGenero = cdGenero;
+    }
+
+    public String getDsGenero() {
+        return dsGenero;
+    }
+
+    public void setDsGenero(String dsGenero) {
+        this.dsGenero = dsGenero;
+    }
+
+    public Integer getCdGrauInstrucao() {
+        return cdGrauInstrucao;
+    }
+
+    public void setCdGrauInstrucao(Integer cdGrauInstrucao) {
+        this.cdGrauInstrucao = cdGrauInstrucao;
+    }
+
+    public String getDsGrauInstrucao() {
+        return dsGrauInstrucao;
+    }
+
+    public void setDsGrauInstrucao(String dsGrauInstrucao) {
+        this.dsGrauInstrucao = dsGrauInstrucao;
+    }
+
+    public Integer getCdEstadoCivil() {
+        return cdEstadoCivil;
+    }
+
+    public void setCdEstadoCivil(Integer cdEstadoCivil) {
+        this.cdEstadoCivil = cdEstadoCivil;
+    }
+
+    public String getDsEstadoCivil() {
+        return dsEstadoCivil;
+    }
+
+    public void setDsEstadoCivil(String dsEstadoCivil) {
+        this.dsEstadoCivil = dsEstadoCivil;
+    }
+
+    public Integer getCdCorRaca() {
+        return cdCorRaca;
+    }
+
+    public void setCdCorRaca(Integer cdCorRaca) {
+        this.cdCorRaca = cdCorRaca;
+    }
+
+    public String getDsCorRaca() {
+        return dsCorRaca;
+    }
+
+    public void setDsCorRaca(String dsCorRaca) {
+        this.dsCorRaca = dsCorRaca;
+    }
+
+    public Integer getCdOcupacao() {
+        return cdOcupacao;
+    }
+
+    public void setCdOcupacao(Integer cdOcupacao) {
+        this.cdOcupacao = cdOcupacao;
+    }
+
+    public String getDsOcupacao() {
+        return dsOcupacao;
+    }
+
+    public void setDsOcupacao(String dsOcupacao) {
+        this.dsOcupacao = dsOcupacao;
+    }
+
+    public Integer getNrDespesaMaxCampanha() {
+        return nrDespesaMaxCampanha;
+    }
+
+    public void setNrDespesaMaxCampanha(Integer nrDespesaMaxCampanha) {
+        this.nrDespesaMaxCampanha = nrDespesaMaxCampanha;
+    }
+
+    public Integer getCdSitTotTurno() {
+        return cdSitTotTurno;
+    }
+
+    public void setCdSitTotTurno(Integer cdSitTotTurno) {
+        this.cdSitTotTurno = cdSitTotTurno;
+    }
+
+    public String getDsSitTotTurno() {
+        return dsSitTotTurno;
+    }
+
+    public void setDsSitTotTurno(String dsSitTotTurno) {
+        this.dsSitTotTurno = dsSitTotTurno;
+    }
+
+    public String getStReeleicao() {
+        return stReeleicao;
+    }
+
+    public void setStReeleicao(String stReeleicao) {
+        this.stReeleicao = stReeleicao;
+    }
+
+    public String getStDeclararBens() {
+        return stDeclararBens;
+    }
+
+    public void setStDeclararBens(String stDeclararBens) {
+        this.stDeclararBens = stDeclararBens;
+    }
+
+    public Integer getNrProtocoloCandidatura() {
+        return nrProtocoloCandidatura;
+    }
+
+    public void setNrProtocoloCandidatura(Integer nrProtocoloCandidatura) {
+        this.nrProtocoloCandidatura = nrProtocoloCandidatura;
+    }
+
+    public Long getNrProcesso() {
+        return nrProcesso;
+    }
+
+    public void setNrProcesso(Long nrProcesso) {
+        this.nrProcesso = nrProcesso;
     }
 }

@@ -2,7 +2,6 @@ package br.org.faetectcc2018.resources;
 
 import br.org.faetectcc2018.model.Candidato;
 import br.org.faetectcc2018.resources.retrofit.CandidatoRestService;
-import br.org.faetectcc2018.resources.retrofit.RestPageImpl;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import okhttp3.OkHttpClient;
 import org.junit.Before;
