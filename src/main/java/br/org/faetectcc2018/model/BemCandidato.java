@@ -22,7 +22,6 @@ public class BemCandidato {
     private Integer cdEleicao;
     private String dsEleicao;
     private LocalDate dtEleicao;
-    private String tpAbrangencia;
     private String sgUf;
     private String sgUe;
     private String nmUe;
@@ -105,14 +104,6 @@ public class BemCandidato {
 
     public void setDtEleicao(LocalDate dtEleicao) {
         this.dtEleicao = dtEleicao;
-    }
-
-    public String getTpAbrangencia() {
-        return tpAbrangencia;
-    }
-
-    public void setTpAbrangencia(String tpAbrangencia) {
-        this.tpAbrangencia = tpAbrangencia;
     }
 
     public String getSgUf() {
