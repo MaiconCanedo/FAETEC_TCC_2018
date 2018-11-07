@@ -28,6 +28,7 @@ public class BemCandidatoService {
 
     public Optional<Page<BemCandidato>> findPage(Integer page, Integer linesPerPage, String orderBy, String direction) {
         Page<BemCandidato> bemCandidatoPage = repository.findAll(PageRequest.of(page, linesPerPage, Sort.Direction.valueOf(direction), orderBy));
+
         if (bemCandidatoPage.getContent().isEmpty())
             return Optional.empty();
 

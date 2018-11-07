@@ -24,6 +24,11 @@ public class CandidatoService {
     }
 
     public Optional<Page<Candidato>> findPage(Integer page, Integer linesPerPage, String orderBy, String direction) {
-        return Optional.ofNullable(repository.findAll(PageRequest.of(page, linesPerPage, Sort.Direction.valueOf(direction), orderBy)));
+        Page<Candidato> candidatoPage = repository.findAll(PageRequest.of(page, linesPerPage, Sort.Direction.valueOf(direction), orderBy));
+
+        if (candidatoPage.getContent().isEmpty())
+            return Optional.empty();
+
+        return Optional.of(candidatoPage);
     }
 }

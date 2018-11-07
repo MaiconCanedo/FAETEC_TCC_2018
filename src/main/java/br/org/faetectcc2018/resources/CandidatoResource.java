@@ -22,14 +22,16 @@ public class CandidatoResource {
                                                     @RequestParam(value = "linesPerPage", defaultValue = "24") Integer linesPerPage,
                                                     @RequestParam(value = "orderBy", defaultValue = "id") String orderBy,
                                                     @RequestParam(value = "direction", defaultValue = "ASC") String direction) {
-        return ResponseEntity.ok(service.findPage(page, linesPerPage, orderBy, direction).orElseThrow(() ->
-                new ObjectNotFoundException("Nenhum objeto foi encontrado! Tipo: " + Candidato.class.getName())));
+        return ResponseEntity.ok(service.findPage(page, linesPerPage, orderBy, direction)
+                .orElseThrow(() -> new ObjectNotFoundException("Nenhum objeto foi encontrado! Tipo: " + Candidato.class.getName()))
+        );
     }
 
     @ApiOperation(value = "Retorna um candidato")
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public ResponseEntity<Candidato> find(@PathVariable Long id) {
-        return ResponseEntity.ok(service.find(id).orElseThrow(() ->
-                new ObjectNotFoundException("Objeto não encontrado! Id: " + id + ", Tipo: " + Candidato.class.getName())));
+        return ResponseEntity.ok(service.find(id)
+                .orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado! Id: " + id + ", Tipo: " + Candidato.class.getName()))
+        );
     }
 }
