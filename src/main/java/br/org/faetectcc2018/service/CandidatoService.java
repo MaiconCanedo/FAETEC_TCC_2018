@@ -1,7 +1,7 @@
-package br.org.faetectcc2018.services;
+package br.org.faetectcc2018.service;
 
 import br.org.faetectcc2018.model.Candidato;
-import br.org.faetectcc2018.repositories.CandidatoRepository;
+import br.org.faetectcc2018.repository.CandidatoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;

@@ -1,7 +1,7 @@
-package br.org.faetectcc2018.services;
+package br.org.faetectcc2018.service;
 
 import br.org.faetectcc2018.model.DespesaCandidato;
-import br.org.faetectcc2018.repositories.DespesaCandidatoRepository;
+import br.org.faetectcc2018.repository.DespesaCandidatoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

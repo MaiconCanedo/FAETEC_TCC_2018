@@ -1,4 +1,4 @@
-package br.org.faetectcc2018.resources.retrofit;
+package br.org.faetectcc2018.resource.retrofit;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;

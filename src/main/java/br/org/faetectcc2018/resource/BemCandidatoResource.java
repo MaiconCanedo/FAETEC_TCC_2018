@@ -1,9 +1,9 @@
-package br.org.faetectcc2018.resources;
+package br.org.faetectcc2018.resource;
 
 import br.org.faetectcc2018.model.BemCandidato;
 import br.org.faetectcc2018.dto.TipoBemCandidatoDTO;
-import br.org.faetectcc2018.services.BemCandidatoService;
-import br.org.faetectcc2018.resources.exceptions.ObjectNotFoundException;
+import br.org.faetectcc2018.service.BemCandidatoService;
+import br.org.faetectcc2018.resource.exceptions.ObjectNotFoundException;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

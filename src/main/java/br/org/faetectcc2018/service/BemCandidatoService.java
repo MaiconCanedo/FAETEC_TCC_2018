@@ -1,8 +1,8 @@
-package br.org.faetectcc2018.services;
+package br.org.faetectcc2018.service;
 
 import br.org.faetectcc2018.model.BemCandidato;
 import br.org.faetectcc2018.dto.TipoBemCandidatoDTO;
-import br.org.faetectcc2018.repositories.BemCandidatoRepository;
+import br.org.faetectcc2018.repository.BemCandidatoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

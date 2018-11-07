@@ -35,7 +35,7 @@ public class SwaggerConfig {
                 .globalResponseMessage(RequestMethod.GET, Arrays.asList(m401, m403, m404))
 
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("br.org.faetectcc2018.resources"))
+                .apis(RequestHandlerSelectors.basePackage("br.org.faetectcc2018.resource"))
                 .paths(PathSelectors.any())
                 .build()
                 .apiInfo(apiInfo());

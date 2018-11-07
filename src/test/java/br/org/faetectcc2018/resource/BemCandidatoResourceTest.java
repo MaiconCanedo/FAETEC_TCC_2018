@@ -1,8 +1,8 @@
-package br.org.faetectcc2018.resources;
+package br.org.faetectcc2018.resource;
 
 import br.org.faetectcc2018.dto.TipoBemCandidatoDTO;
 import br.org.faetectcc2018.model.BemCandidato;
-import br.org.faetectcc2018.resources.retrofit.BemCandidatoRestService;
+import br.org.faetectcc2018.resource.retrofit.BemCandidatoRestService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import okhttp3.OkHttpClient;
 import org.junit.Before;

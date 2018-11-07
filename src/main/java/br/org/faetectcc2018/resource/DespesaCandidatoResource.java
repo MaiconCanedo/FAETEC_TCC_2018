@@ -1,8 +1,8 @@
-package br.org.faetectcc2018.resources;
+package br.org.faetectcc2018.resource;
 
 import br.org.faetectcc2018.model.DespesaCandidato;
-import br.org.faetectcc2018.services.DespesaCandidatoService;
-import br.org.faetectcc2018.resources.exceptions.ObjectNotFoundException;
+import br.org.faetectcc2018.service.DespesaCandidatoService;
+import br.org.faetectcc2018.resource.exceptions.ObjectNotFoundException;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

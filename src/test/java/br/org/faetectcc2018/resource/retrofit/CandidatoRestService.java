@@ -1,4 +1,4 @@
-package br.org.faetectcc2018.resources.retrofit;
+package br.org.faetectcc2018.resource.retrofit;
 
 
 import br.org.faetectcc2018.model.Candidato;
