@@ -6,7 +6,7 @@ import java.time.LocalTime;
 import java.util.Objects;
 
 @Entity
-@Table(name = "despesa_candidato")
+@Table(name = "despesas_candidato")
 public class DespesaCandidato {
 
     @Id
@@ -16,7 +16,7 @@ public class DespesaCandidato {
 
     private LocalDate dtGeracao;
 
-    private LocalTime hhEleicao;
+    private LocalTime hhGeracao;
 
     private Integer anoEleicao;
 
@@ -35,18 +35,18 @@ public class DespesaCandidato {
     private Integer stTurno;
 
     @Column(length = 20)
-    private String tpPrestacaoConta;
+    private String tpPrestacaoContas;
 
-    private LocalDate dtPrestacaoConta;
+    private LocalDate dtPrestacaoContas;
 
-    @Column(length = 9)
-    private String sqPrestacaoConta;
-
-    @Column(length = 2)
-    private String sqUf;
+    @Column(name = "sq_prestador_contas", length = 9)
+    private String sqPrestacaoContas;
 
     @Column(length = 2)
-    private String sqUe;
+    private String sgUf;
+
+    @Column(length = 2)
+    private String sgUe;
 
     @Column(length = 19)
     private String nmUe;
@@ -60,7 +60,7 @@ public class DespesaCandidato {
     private String dsCargo;
 
     @Column(length = 12)
-    private Integer sqCandidato;
+    private String sqCandidato;
 
     @Column(length = 5)
     private String nrCandidato;
@@ -68,10 +68,10 @@ public class DespesaCandidato {
     private String nmCandidato;
 
     @Column(length = 11)
-    private Integer nrCpfCandidato;
+    private String nrCpfCandidato;
 
     @Column(length = 11)
-    private Integer nrCpfViceCandidato;
+    private String nrCpfViceCandidato;
 
     private Integer nrPartido;
 
@@ -100,7 +100,7 @@ public class DespesaCandidato {
     private String dsEsferaPartFornecedor;
 
     @Column(length = 2)
-    private String sqUfFornecedor;
+    private String sgUfFornecedor;
 
     private Integer cdMunicipioFornecedor;
 
@@ -114,10 +114,6 @@ public class DespesaCandidato {
     private Integer cdCargoFornecedor;
 
     private String dsCargoFornecedor;
-
-    private Integer cdPartidoFornecedor;
-
-    private String dsPartidoFornecedor;
 
     private Integer nrPartidoFornecedor;
 
@@ -137,7 +133,7 @@ public class DespesaCandidato {
     private String sqDespesa;
 
     private LocalDate dtDespesa;
-
+    private String dsDespesa;
     private Double vrDespesaContratada;
 
     public Long getId() {
@@ -156,12 +152,12 @@ public class DespesaCandidato {
         this.dtGeracao = dtGeracao;
     }
 
-    public LocalTime getHhEleicao() {
-        return hhEleicao;
+    public LocalTime getHhGeracao() {
+        return hhGeracao;
     }
 
-    public void setHhEleicao(LocalTime hhEleicao) {
-        this.hhEleicao = hhEleicao;
+    public void setHhGeracao(LocalTime hhEleicao) {
+        this.hhGeracao = hhEleicao;
     }
 
     public Integer getAnoEleicao() {
@@ -220,44 +216,44 @@ public class DespesaCandidato {
         this.stTurno = stTurno;
     }
 
-    public String getTpPrestacaoConta() {
-        return tpPrestacaoConta;
+    public String getTpPrestacaoContas() {
+        return tpPrestacaoContas;
     }
 
-    public void setTpPrestacaoConta(String tpPrestacaoConta) {
-        this.tpPrestacaoConta = tpPrestacaoConta;
+    public void setTpPrestacaoContas(String tpPrestacaoConta) {
+        this.tpPrestacaoContas = tpPrestacaoConta;
     }
 
-    public LocalDate getDtPrestacaoConta() {
-        return dtPrestacaoConta;
+    public LocalDate getDtPrestacaoContas() {
+        return dtPrestacaoContas;
     }
 
-    public void setDtPrestacaoConta(LocalDate dtPrestacaoConta) {
-        this.dtPrestacaoConta = dtPrestacaoConta;
+    public void setDtPrestacaoContas(LocalDate dtPrestacaoConta) {
+        this.dtPrestacaoContas = dtPrestacaoConta;
     }
 
-    public String getSqPrestacaoConta() {
-        return sqPrestacaoConta;
+    public String getSqPrestacaoContas() {
+        return sqPrestacaoContas;
     }
 
-    public void setSqPrestacaoConta(String sqPrestacaoConta) {
-        this.sqPrestacaoConta = sqPrestacaoConta;
+    public void setSqPrestacaoContas(String sqPrestacaoConta) {
+        this.sqPrestacaoContas = sqPrestacaoConta;
     }
 
-    public String getSqUf() {
-        return sqUf;
+    public String getSgUf() {
+        return sgUf;
     }
 
-    public void setSqUf(String sqUf) {
-        this.sqUf = sqUf;
+    public void setSgUf(String sqUf) {
+        this.sgUf = sqUf;
     }
 
-    public String getSqUe() {
-        return sqUe;
+    public String getSgUe() {
+        return sgUe;
     }
 
-    public void setSqUe(String sqUe) {
-        this.sqUe = sqUe;
+    public void setSgUe(String sqUe) {
+        this.sgUe = sqUe;
     }
 
     public String getNmUe() {
@@ -292,11 +288,11 @@ public class DespesaCandidato {
         this.dsCargo = dsCargo;
     }
 
-    public Integer getSqCandidato() {
+    public String getSqCandidato() {
         return sqCandidato;
     }
 
-    public void setSqCandidato(Integer sqCandidato) {
+    public void setSqCandidato(String sqCandidato) {
         this.sqCandidato = sqCandidato;
     }
 
@@ -316,19 +312,19 @@ public class DespesaCandidato {
         this.nmCandidato = nmCandidato;
     }
 
-    public Integer getNrCpfCandidato() {
+    public String getNrCpfCandidato() {
         return nrCpfCandidato;
     }
 
-    public void setNrCpfCandidato(Integer nrCpfCandidato) {
+    public void setNrCpfCandidato(String nrCpfCandidato) {
         this.nrCpfCandidato = nrCpfCandidato;
     }
 
-    public Integer getNrCpfViceCandidato() {
+    public String getNrCpfViceCandidato() {
         return nrCpfViceCandidato;
     }
 
-    public void setNrCpfViceCandidato(Integer nrCpfViceCandidato) {
+    public void setNrCpfViceCandidato(String nrCpfViceCandidato) {
         this.nrCpfViceCandidato = nrCpfViceCandidato;
     }
 
@@ -428,12 +424,12 @@ public class DespesaCandidato {
         this.dsEsferaPartFornecedor = dsEsferaPartFornecedor;
     }
 
-    public String getSqUfFornecedor() {
-        return sqUfFornecedor;
+    public String getSgUfFornecedor() {
+        return sgUfFornecedor;
     }
 
-    public void setSqUfFornecedor(String sqUfFornecedor) {
-        this.sqUfFornecedor = sqUfFornecedor;
+    public void setSgUfFornecedor(String sqUfFornecedor) {
+        this.sgUfFornecedor = sqUfFornecedor;
     }
 
     public Integer getCdMunicipioFornecedor() {
@@ -482,14 +478,6 @@ public class DespesaCandidato {
 
     public void setDsCargoFornecedor(String dsCargoFornecedor) {
         this.dsCargoFornecedor = dsCargoFornecedor;
-    }
-
-    public String getDsPartidoFornecedor() {
-        return dsPartidoFornecedor;
-    }
-
-    public void setDsPartidoFornecedor(String dsPartidoFornecedor) {
-        this.dsPartidoFornecedor = dsPartidoFornecedor;
     }
 
     public Integer getNrPartidoFornecedor() {
@@ -564,6 +552,14 @@ public class DespesaCandidato {
         this.dtDespesa = dtDespesa;
     }
 
+    public String getDsDespesa() {
+        return dsDespesa;
+    }
+
+    public void setDsDespesa(String dsDespesa) {
+        this.dsDespesa = dsDespesa;
+    }
+
     public Double getVrDespesaContratada() {
         return vrDespesaContratada;
     }
@@ -576,7 +572,8 @@ public class DespesaCandidato {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        return Objects.equals(id, ((DespesaCandidato)o).id);
+        DespesaCandidato that = (DespesaCandidato) o;
+        return Objects.equals(id, that.id);
     }
 
     @Override
