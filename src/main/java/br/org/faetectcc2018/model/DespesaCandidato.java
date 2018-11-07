@@ -484,14 +484,6 @@ public class DespesaCandidato {
         this.dsCargoFornecedor = dsCargoFornecedor;
     }
 
-    public Integer getCdPartidoFornecedor() {
-        return cdPartidoFornecedor;
-    }
-
-    public void setCdPartidoFornecedor(Integer cdPartidoFornecedor) {
-        this.cdPartidoFornecedor = cdPartidoFornecedor;
-    }
-
     public String getDsPartidoFornecedor() {
         return dsPartidoFornecedor;
     }
