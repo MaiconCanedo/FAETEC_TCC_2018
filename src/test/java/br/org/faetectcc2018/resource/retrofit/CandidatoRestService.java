@@ -9,12 +9,12 @@ import retrofit2.http.Query;
 
 public interface CandidatoRestService {
 
-    @GET("/candidatos")
+    @GET("/candidato")
     Call<RestPageImpl<Candidato>> findPage(@Query("page") Integer page,
                                            @Query("linesPerPage") Integer linesPerPage,
                                            @Query("oderBy") String orderBy,
                                            @Query("direction") String direction);
 
-    @GET("/candidatos/{id}")
+    @GET("/candidato/{id}")
     Call<Candidato> find(@Path("id") Long id);
 }

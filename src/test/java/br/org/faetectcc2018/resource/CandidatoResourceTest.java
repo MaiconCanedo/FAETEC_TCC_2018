@@ -47,13 +47,13 @@ public class CandidatoResourceTest {
     public void findPage() throws IOException {
         Optional<Page<Candidato>> candidatos = ofNullable(candidatoRestService.findPage(0, null, null, null).execute().body());
 
-        assertTrue(candidatos.isPresent());
+        assertTrue("Nenhum candidato foi encontrado", candidatos.isPresent());
     }
 
     @Test
     public void find() throws IOException {
         Optional<Candidato> candidato = ofNullable(candidatoRestService.find(1L).execute().body());
 
-        assertTrue(candidato.isPresent());
+        assertTrue("Candidato não encontrado", candidato.isPresent());
     }
 }

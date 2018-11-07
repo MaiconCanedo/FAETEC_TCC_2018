@@ -11,13 +11,13 @@ import java.util.List;
 
 public interface BemCandidatoRestService {
 
-    @GET("/benscandidatos/{id}")
+    @GET("/bem/{id}")
     Call<BemCandidato> find(@Path("id") Long id);
 
-    @GET("/benscandidatos/tiposdebens")
+    @GET("/bem/tiposdebens")
     Call<List<TipoBemCandidatoDTO>> findTipoDeBem();
 
-    @GET("/benscandidatos")
+    @GET("/bem")
     Call<RestPageImpl<BemCandidato>> findPage(@Query("page") Integer page,
                                               @Query("linesPerPage") Integer linesPerPage,
                                               @Query("orderBy") String orderBy,
