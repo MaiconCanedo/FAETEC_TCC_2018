@@ -1,7 +1,7 @@
 package br.org.faetectcc2018.services;
 
-import br.org.faetectcc2018.model.Votacao;
-import br.org.faetectcc2018.repositories.VotacaoRepository;
+import br.org.faetectcc2018.model.DespesaCandidato;
+import br.org.faetectcc2018.repositories.DespesaCandidatoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -12,20 +12,20 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class VotacaoService {
+public class DespesaCandidatoService {
 
     @Autowired
-    private VotacaoRepository repository;
+    private DespesaCandidatoRepository repository;
 
-    public Optional<Votacao> find(Long id) {
+    public Optional<DespesaCandidato> find(Long id) {
         return repository.findById(id);
     }
 
-    public Optional<List<Votacao>> findAll() {
+    public Optional<List<DespesaCandidato>> findAll() {
         return Optional.ofNullable(repository.findAll());
     }
 
-    public Optional<Page<Votacao>> findPage(Integer page, Integer linesPerPage, String orderBy, String direction) {
+    public Optional<Page<DespesaCandidato>> findPage(Integer page, Integer linesPerPage, String orderBy, String direction) {
         return Optional.ofNullable(repository.findAll(PageRequest.of(page, linesPerPage, Sort.Direction.valueOf(direction), orderBy)));
     }
 }

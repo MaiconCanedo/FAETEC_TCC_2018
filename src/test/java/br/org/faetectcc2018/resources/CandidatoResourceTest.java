@@ -17,6 +17,7 @@ import retrofit2.converter.jackson.JacksonConverterFactory;
 import java.io.IOException;
 import java.util.Optional;
 
+import static java.util.Optional.ofNullable;
 import static org.junit.Assert.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -44,14 +45,14 @@ public class CandidatoResourceTest {
 
     @Test
     public void findPage() throws IOException {
-        Optional<Page<Candidato>> candidatos = Optional.ofNullable(candidatoRestService.findPage(0, null, null, null).execute().body());
+        Optional<Page<Candidato>> candidatos = ofNullable(candidatoRestService.findPage(0, null, null, null).execute().body());
 
         assertTrue(candidatos.isPresent());
     }
 
     @Test
     public void find() throws IOException {
-        Optional<Candidato> candidato = Optional.ofNullable(candidatoRestService.find(1L).execute().body());
+        Optional<Candidato> candidato = ofNullable(candidatoRestService.find(1L).execute().body());
 
         assertTrue(candidato.isPresent());
     }

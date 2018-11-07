@@ -5,10 +5,12 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 @Entity
+@Table(name = "candidatos")
 public class Candidato {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_candidato")
     private Long id;
     private LocalDate dtGeracao;
     private LocalTime hhGeracao;

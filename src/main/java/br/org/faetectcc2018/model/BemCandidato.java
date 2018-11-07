@@ -1,66 +1,39 @@
 package br.org.faetectcc2018.model;
 
 import javax.persistence.*;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.Objects;
 import java.util.StringJoiner;
 
 @Entity
-@Table(name = "bens_candidatos")
+@Table(name = "bem_candidato")
 public class BemCandidato {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_bem_candidato")
     private Long id;
-
+    private LocalDate dtGeracao;
+    private LocalTime hhGeracao;
     private Integer anoEleicao;
-
-    @Column(length = 70)
-    private String descricaoEleicao;
-
-    @Column(length = 2)
-    private String siglaUf;
-
-    @Column(length = 11)
+    private Integer cdTipoEleicao;
+    private String nmTipoEleicao;
+    private Integer cdEleicao;
+    private String dsEleicao;
+    private LocalDate dtEleicao;
+    private String tpAbrangencia;
+    private String sgUf;
+    private String sgUe;
+    private String nmUe;
     private String sqCandidato;
-
+    private String nrOrdemCandidato;
     private Integer cdTipoBemCandidato;
-
-    @Column(length = 100)
     private String dsTipoBemCandidato;
-
-    private String detalheBem;
-
-    @Column(length = 10, precision = 2)
-    private Double valorBem;
-
-    public BemCandidato() {}
-
-    @Override
-    public String toString() {
-        return new StringJoiner(", ", BemCandidato.class.getSimpleName() + "[", "]")
-                .add("id=" + id)
-                .add("anoEleicao=" + anoEleicao)
-                .add("descricaoEleicao='" + descricaoEleicao + "'")
-                .add("siglaUf='" + siglaUf + "'")
-                .add("sqCandidato='" + sqCandidato + "'")
-                .add("cdTipoBemCandidato=" + cdTipoBemCandidato)
-                .add("dsTipoBemCandidato='" + dsTipoBemCandidato + "'")
-                .add("detalheBem='" + detalheBem + "'")
-                .add("valorBem=" + valorBem)
-                .toString();
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        return Objects.equals(id, ((BemCandidato)o).id);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
-    }
+    private String dsBemCandidato;
+    private Double vrBemCandidato;
+    private LocalDate dtUltimaAtualizacao;
+    private LocalTime hhUltimaAtualizacao;
 
     public Long getId() {
         return id;
@@ -68,6 +41,22 @@ public class BemCandidato {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public LocalDate getDtGeracao() {
+        return dtGeracao;
+    }
+
+    public void setDtGeracao(LocalDate dtGeracao) {
+        this.dtGeracao = dtGeracao;
+    }
+
+    public LocalTime getHhGeracao() {
+        return hhGeracao;
+    }
+
+    public void setHhGeracao(LocalTime hhGeracao) {
+        this.hhGeracao = hhGeracao;
     }
 
     public Integer getAnoEleicao() {
@@ -78,20 +67,76 @@ public class BemCandidato {
         this.anoEleicao = anoEleicao;
     }
 
-    public String getDescricaoEleicao() {
-        return descricaoEleicao;
+    public Integer getCdTipoEleicao() {
+        return cdTipoEleicao;
     }
 
-    public void setDescricaoEleicao(String descricaoEleicao) {
-        this.descricaoEleicao = descricaoEleicao;
+    public void setCdTipoEleicao(Integer cdTipoEleicao) {
+        this.cdTipoEleicao = cdTipoEleicao;
     }
 
-    public String getSiglaUf() {
-        return siglaUf;
+    public String getNmTipoEleicao() {
+        return nmTipoEleicao;
     }
 
-    public void setSiglaUf(String siglaUf) {
-        this.siglaUf = siglaUf;
+    public void setNmTipoEleicao(String nmTipoEleicao) {
+        this.nmTipoEleicao = nmTipoEleicao;
+    }
+
+    public Integer getCdEleicao() {
+        return cdEleicao;
+    }
+
+    public void setCdEleicao(Integer cdEleicao) {
+        this.cdEleicao = cdEleicao;
+    }
+
+    public String getDsEleicao() {
+        return dsEleicao;
+    }
+
+    public void setDsEleicao(String dsEleicao) {
+        this.dsEleicao = dsEleicao;
+    }
+
+    public LocalDate getDtEleicao() {
+        return dtEleicao;
+    }
+
+    public void setDtEleicao(LocalDate dtEleicao) {
+        this.dtEleicao = dtEleicao;
+    }
+
+    public String getTpAbrangencia() {
+        return tpAbrangencia;
+    }
+
+    public void setTpAbrangencia(String tpAbrangencia) {
+        this.tpAbrangencia = tpAbrangencia;
+    }
+
+    public String getSgUf() {
+        return sgUf;
+    }
+
+    public void setSgUf(String sgUf) {
+        this.sgUf = sgUf;
+    }
+
+    public String getSgUe() {
+        return sgUe;
+    }
+
+    public void setSgUe(String sgUe) {
+        this.sgUe = sgUe;
+    }
+
+    public String getNmUe() {
+        return nmUe;
+    }
+
+    public void setNmUe(String nmUe) {
+        this.nmUe = nmUe;
     }
 
     public String getSqCandidato() {
@@ -100,6 +145,14 @@ public class BemCandidato {
 
     public void setSqCandidato(String sqCandidato) {
         this.sqCandidato = sqCandidato;
+    }
+
+    public String getNrOrdemCandidato() {
+        return nrOrdemCandidato;
+    }
+
+    public void setNrOrdemCandidato(String nrOrdemCandidato) {
+        this.nrOrdemCandidato = nrOrdemCandidato;
     }
 
     public Integer getCdTipoBemCandidato() {
@@ -118,19 +171,47 @@ public class BemCandidato {
         this.dsTipoBemCandidato = dsTipoBemCandidato;
     }
 
-    public String getDetalheBem() {
-        return detalheBem;
+    public String getDsBemCandidato() {
+        return dsBemCandidato;
     }
 
-    public void setDetalheBem(String detalheBem) {
-        this.detalheBem = detalheBem;
+    public void setDsBemCandidato(String dsBemCandidato) {
+        this.dsBemCandidato = dsBemCandidato;
     }
 
-    public Double getValorBem() {
-        return valorBem;
+    public Double getVrBemCandidato() {
+        return vrBemCandidato;
     }
 
-    public void setValorBem(Double valorBem) {
-        this.valorBem = valorBem;
+    public void setVrBemCandidato(Double vrBemCandidato) {
+        this.vrBemCandidato = vrBemCandidato;
+    }
+
+    public LocalDate getDtUltimaAtualizacao() {
+        return dtUltimaAtualizacao;
+    }
+
+    public void setDtUltimaAtualizacao(LocalDate dtUltimaAtualizacao) {
+        this.dtUltimaAtualizacao = dtUltimaAtualizacao;
+    }
+
+    public LocalTime getHhUltimaAtualizacao() {
+        return hhUltimaAtualizacao;
+    }
+
+    public void setHhUltimaAtualizacao(LocalTime hhUltimaAtualizacao) {
+        this.hhUltimaAtualizacao = hhUltimaAtualizacao;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        return Objects.equals(id, ((BemCandidato)o).id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }
