@@ -1,7 +1,7 @@
 package br.org.faetectcc2018.service;
 
 import br.org.faetectcc2018.model.BemCandidato;
-import br.org.faetectcc2018.dto.TipoBemCandidatoDTO;
+import br.org.faetectcc2018.dto.TipoBemDTO;
 import br.org.faetectcc2018.repository.BemCandidatoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -35,7 +35,7 @@ public class BemCandidatoService {
         return Optional.of(bemCandidatoPage);
     }
 
-    public Optional<List<TipoBemCandidatoDTO>> findAllTipoDeBem() {
+    public Optional<List<TipoBemDTO>> findAllTipoDeBem() {
         return Optional.ofNullable(repository.findDistinctByDsTipoBemCandidatoCustom());
     }
 }

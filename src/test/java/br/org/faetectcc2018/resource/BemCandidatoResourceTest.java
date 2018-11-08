@@ -1,6 +1,6 @@
 package br.org.faetectcc2018.resource;
 
-import br.org.faetectcc2018.dto.TipoBemCandidatoDTO;
+import br.org.faetectcc2018.dto.TipoBemDTO;
 import br.org.faetectcc2018.model.BemCandidato;
 import br.org.faetectcc2018.resource.retrofit.BemCandidatoRestService;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -59,7 +59,7 @@ public class BemCandidatoResourceTest {
 
     @Test
     public void findTipoDeBem() throws IOException {
-        Optional<List<TipoBemCandidatoDTO>> tipoBemCandidatoList = Optional.ofNullable(bemCandidatoRestService.findTipoDeBem().execute().body());
+        Optional<List<TipoBemDTO>> tipoBemCandidatoList = Optional.ofNullable(bemCandidatoRestService.findTipoDeBem().execute().body());
 
         assertTrue(tipoBemCandidatoList.isPresent());
         tipoBemCandidatoList.get().forEach(System.out::println);

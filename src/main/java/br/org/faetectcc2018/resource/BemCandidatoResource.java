@@ -1,7 +1,7 @@
 package br.org.faetectcc2018.resource;
 
 import br.org.faetectcc2018.model.BemCandidato;
-import br.org.faetectcc2018.dto.TipoBemCandidatoDTO;
+import br.org.faetectcc2018.dto.TipoBemDTO;
 import br.org.faetectcc2018.service.BemCandidatoService;
 import br.org.faetectcc2018.resource.exceptions.ObjectNotFoundException;
 import io.swagger.annotations.ApiOperation;
@@ -41,8 +41,8 @@ public class BemCandidatoResource {
     }
 
     @ApiOperation(value = "Retorna todos os tipos de bens ordenados por nome")
-    @RequestMapping(value = "/tiposdebens", method = RequestMethod.GET)
-    public ResponseEntity<List<TipoBemCandidatoDTO>> findTipoDeBem() {
+    @RequestMapping(value = "/tipo", method = RequestMethod.GET)
+    public ResponseEntity<List<TipoBemDTO>> findTipoDeBem() {
         return ResponseEntity.ok(service.findAllTipoDeBem().orElseThrow(() -> new ObjectNotFoundException("Nenhum objeto foi encontrado!")));
     }
 }

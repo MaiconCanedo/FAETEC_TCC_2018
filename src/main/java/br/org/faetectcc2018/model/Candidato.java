@@ -3,6 +3,7 @@ package br.org.faetectcc2018.model;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.StringJoiner;
 
 @Entity
 @Table(name = "candidatos")
@@ -541,5 +542,70 @@ public class Candidato {
 
     public void setNrProcesso(Long nrProcesso) {
         this.nrProcesso = nrProcesso;
+    }
+
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", Candidato.class.getSimpleName() + "[", "]")
+                .add("id=" + id)
+                .add("dtGeracao=" + dtGeracao)
+                .add("hhGeracao=" + hhGeracao)
+                .add("anoEleicao=" + anoEleicao)
+                .add("cdTipoEleicao=" + cdTipoEleicao)
+                .add("nmTipoEleicao='" + nmTipoEleicao + "'")
+                .add("nrTurno=" + nrTurno)
+                .add("cdEleicao=" + cdEleicao)
+                .add("dsEleicao='" + dsEleicao + "'")
+                .add("dtEleicao=" + dtEleicao)
+                .add("tpAbrangencia='" + tpAbrangencia + "'")
+                .add("sgUf='" + sgUf + "'")
+                .add("sgUe='" + sgUe + "'")
+                .add("nmUe='" + nmUe + "'")
+                .add("cdCargo=" + cdCargo)
+                .add("dsCargo='" + dsCargo + "'")
+                .add("sqCandidato='" + sqCandidato + "'")
+                .add("nrCandidato='" + nrCandidato + "'")
+                .add("nmCandidato='" + nmCandidato + "'")
+                .add("nmUrnaCandidato='" + nmUrnaCandidato + "'")
+                .add("nmSocialCandidato='" + nmSocialCandidato + "'")
+                .add("nrCpfCandidato='" + nrCpfCandidato + "'")
+                .add("nmEmail='" + nmEmail + "'")
+                .add("cdSituacaoCandidatura=" + cdSituacaoCandidatura)
+                .add("dsSituacaoCandidatura='" + dsSituacaoCandidatura + "'")
+                .add("cdDetalheSituacaoCand=" + cdDetalheSituacaoCand)
+                .add("dsDetalheSituacaoCand='" + dsDetalheSituacaoCand + "'")
+                .add("tpAgremiacao='" + tpAgremiacao + "'")
+                .add("nrPartido=" + nrPartido)
+                .add("sgPartido='" + sgPartido + "'")
+                .add("nmPartido='" + nmPartido + "'")
+                .add("sqColigacao='" + sqColigacao + "'")
+                .add("nmColigacao='" + nmColigacao + "'")
+                .add("dsComposicaoColigacao='" + dsComposicaoColigacao + "'")
+                .add("cdNacionalidade=" + cdNacionalidade)
+                .add("dsNacionalidade='" + dsNacionalidade + "'")
+                .add("sgUfNascimento='" + sgUfNascimento + "'")
+                .add("cdMunicipioNascimento=" + cdMunicipioNascimento)
+                .add("nmMunicipioNascimento='" + nmMunicipioNascimento + "'")
+                .add("dtNascimento=" + dtNascimento)
+                .add("nrIdadeDataPosse=" + nrIdadeDataPosse)
+                .add("nrTituloEleitoralCandidato='" + nrTituloEleitoralCandidato + "'")
+                .add("cdGenero=" + cdGenero)
+                .add("dsGenero='" + dsGenero + "'")
+                .add("cdGrauInstrucao=" + cdGrauInstrucao)
+                .add("dsGrauInstrucao='" + dsGrauInstrucao + "'")
+                .add("cdEstadoCivil=" + cdEstadoCivil)
+                .add("dsEstadoCivil='" + dsEstadoCivil + "'")
+                .add("cdCorRaca=" + cdCorRaca)
+                .add("dsCorRaca='" + dsCorRaca + "'")
+                .add("cdOcupacao=" + cdOcupacao)
+                .add("dsOcupacao='" + dsOcupacao + "'")
+                .add("nrDespesaMaxCampanha=" + nrDespesaMaxCampanha)
+                .add("cdSitTotTurno=" + cdSitTotTurno)
+                .add("dsSitTotTurno='" + dsSitTotTurno + "'")
+                .add("stReeleicao='" + stReeleicao + "'")
+                .add("stDeclararBens='" + stDeclararBens + "'")
+                .add("nrProtocoloCandidatura=" + nrProtocoloCandidatura)
+                .add("nrProcesso=" + nrProcesso)
+                .toString();
     }
 }

@@ -1,6 +1,6 @@
 package br.org.faetectcc2018.resource.retrofit;
 
-import br.org.faetectcc2018.dto.TipoBemCandidatoDTO;
+import br.org.faetectcc2018.dto.TipoBemDTO;
 import br.org.faetectcc2018.model.BemCandidato;
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -14,8 +14,8 @@ public interface BemCandidatoRestService {
     @GET("/bem/{id}")
     Call<BemCandidato> find(@Path("id") Long id);
 
-    @GET("/bem/tiposdebens")
-    Call<List<TipoBemCandidatoDTO>> findTipoDeBem();
+    @GET("/bem/tipo")
+    Call<List<TipoBemDTO>> findTipoDeBem();
 
     @GET("/bem")
     Call<RestPageImpl<BemCandidato>> findPage(@Query("page") Integer page,

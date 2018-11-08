@@ -3,15 +3,15 @@ package br.org.faetectcc2018.dto;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-public class TipoBemCandidatoDTO {
+public class TipoBemDTO {
 
     private Integer cdTipoBemCandidato;
     private String dsTipoBemCandidato;
 
-    public TipoBemCandidatoDTO() {
+    public TipoBemDTO() {
     }
 
-    public TipoBemCandidatoDTO(Integer codigo, String descricao) {
+    public TipoBemDTO(Integer codigo, String descricao) {
         this.cdTipoBemCandidato = codigo;
         this.dsTipoBemCandidato = descricao;
     }
@@ -34,7 +34,7 @@ public class TipoBemCandidatoDTO {
 
     @Override
     public String toString() {
-        return new StringJoiner(", ", TipoBemCandidatoDTO.class.getSimpleName() + "[", "]")
+        return new StringJoiner(", ", TipoBemDTO.class.getSimpleName() + "[", "]")
                 .add("cdTipoBemCandidato=" + cdTipoBemCandidato)
                 .add("dsTipoBemCandidato='" + dsTipoBemCandidato + "'")
                 .toString();
@@ -44,7 +44,7 @@ public class TipoBemCandidatoDTO {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        TipoBemCandidatoDTO that = (TipoBemCandidatoDTO) o;
+        TipoBemDTO that = (TipoBemDTO) o;
         return Objects.equals(cdTipoBemCandidato, that.cdTipoBemCandidato);
     }
 
