@@ -130,7 +130,7 @@ public class CandidatoRepositoryTest {
     }
 
     @Test
-    public void findBySgUfAndDsCargo_SiglaUfCorretaCargoCodigoCorreto() {
+    public void findBySgUfAndDsCargo_SiglaUfCorretaCargoDescricaoCorreta() {
         final String nome = "Manuel Deodoro da Fonseca";
         final String siglaUF = "RJ";
         final String cargoDescricao = "PRESIDENTE";
@@ -150,7 +150,7 @@ public class CandidatoRepositoryTest {
     }
 
     @Test
-    public void findBySgUfAndDsCargo_TestarOrdemAlfabeticaSiglaUfCorretaCargoCodigoCorreto() {
+    public void findBySgUfAndDsCargo_TestarOrdemAlfabeticaSiglaUfCorretaCargoDescricaoCorreta() {
         final String siglaUF = "RJ";
         final String nome1 = "Dilma Vana Rousseff";
         final String nome2 = "Luiz Inacio Lula da Silva";
@@ -180,7 +180,7 @@ public class CandidatoRepositoryTest {
     }
 
     @Test
-    public void findBySgUfAndDsCargo_SiglaUfIncorretaCargoCodigoCorreto() {
+    public void findBySgUfAndDsCargo_SiglaUfIncorretaCargoDescricaoCorreto() {
         final String nome = "Manuel Deodoro da Fonseca";
         final String siglaUF = "RJ";
         final String cargoDescricao = "PRESIDENTE";
@@ -197,7 +197,7 @@ public class CandidatoRepositoryTest {
     }
 
     @Test
-    public void findBySgUfAndDsCargo_SiglaUfCorretaCargoCodigoIncorreto() {
+    public void findBySgUfAndDsCargo_SiglaUfCorretaCargoDescricaoIncorreta() {
         final String nome = "Manuel Deodoro da Fonseca";
         final String siglaUF = "RJ";
         final String cargoDescricao = "PRESIDENTE";
@@ -209,7 +209,7 @@ public class CandidatoRepositoryTest {
                 .build();
         candidatoRepository.save(candidato);
 
-        final Page<Candidato> candidatoPage = candidatoRepository.findBySgUfAndDsCargo(siglaUF, cargoDescricao, of(0, 20, ASC, "nmCandidato"));
-        assertTrue("Objeto foi encontrado, mesmo informando codigo do cargo errado", candidatoPage.getContent().isEmpty());
+        final Page<Candidato> candidatoPage = candidatoRepository.findBySgUfAndDsCargo(siglaUF, "Descricao Incorreta", of(0, 20, ASC, "nmCandidato"));
+        assertTrue("Objeto foi encontrado, mesmo informando a descricao do cargo errada", candidatoPage.getContent().isEmpty());
     }
 }

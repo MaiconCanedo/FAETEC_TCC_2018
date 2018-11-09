@@ -18,17 +18,8 @@ public class CandidatoService {
         return repository.findById(id);
     }
 
-    public Optional<Page<Candidato>> findPage(Integer page, Integer linesPerPage, String orderBy, String direction) {
-        Page<Candidato> candidatoPage = repository.findAll(PageRequest.of(page, linesPerPage, Sort.Direction.valueOf(direction), orderBy));
-
-        if (candidatoPage.getContent().isEmpty())
-            return Optional.empty();
-
-        return Optional.of(candidatoPage);
-    }
-
-    public Optional<Page<Candidato>> findByCargoAndUf(String siglaUf, String cargoCodigo, Integer page, Integer linesPerPage, String orderBy, String direction){
-        Page<Candidato> candidatoPage = repository.findBySgUfAndDsCargo(siglaUf, cargoCodigo, PageRequest.of(page, linesPerPage, Sort.Direction.valueOf(direction), orderBy));
+    public Optional<Page<Candidato>> findByCargoAndUf(String siglaUf, String cargoDescricao, Integer page, Integer linesPerPage, String orderBy, String direction){
+        Page<Candidato> candidatoPage = repository.findBySgUfAndDsCargo(siglaUf, cargoDescricao, PageRequest.of(page, linesPerPage, Sort.Direction.valueOf(direction), orderBy));
 
         if (candidatoPage.getContent().isEmpty())
             return Optional.empty();

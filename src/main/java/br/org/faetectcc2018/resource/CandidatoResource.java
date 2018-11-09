@@ -29,7 +29,6 @@ public class CandidatoResource {
         );
     }
 
-
     @ApiOperation(value = "Retorna um candidato")
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public ResponseEntity<Candidato> find(@PathVariable Long id) {
