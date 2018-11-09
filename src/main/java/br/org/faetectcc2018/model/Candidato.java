@@ -72,6 +72,17 @@ public class Candidato {
     private Integer nrProtocoloCandidatura;
     private Long nrProcesso;
 
+    public Candidato() {
+    }
+
+    public Candidato(Long id, String siglaUf, Integer cargoCodigo, String cargoDescricao, String nome) {
+        this.id = id;
+        this.sgUf = siglaUf;
+        this.cdCargo = cargoCodigo;
+        this.dsCargo = cargoDescricao;
+        this.nmCandidato = nome;
+    }
+
     public Long getId() {
         return id;
     }
@@ -607,5 +618,42 @@ public class Candidato {
                 .add("nrProtocoloCandidatura=" + nrProtocoloCandidatura)
                 .add("nrProcesso=" + nrProcesso)
                 .toString();
+    }
+
+    public static class Builder {
+        private Long id;
+        private String nome;
+        private String siglaUf;
+        private Integer cargoCodigo;
+        private String cargoDescricao;
+
+        public Builder comId(Long id) {
+            this.id = id;
+            return this;
+        }
+
+        public Builder comNome(String nome) {
+            this.nome = nome;
+            return this;
+        }
+
+        public Builder comSiglaUf(String siglaUf) {
+            this.siglaUf = siglaUf;
+            return this;
+        }
+
+        public Builder comCargoCodigo(Integer cargoCodigo) {
+            this.cargoCodigo = cargoCodigo;
+            return this;
+        }
+
+        public Builder comCargoDescricao(String cargoDescricao) {
+            this.cargoDescricao = cargoDescricao;
+            return this;
+        }
+
+        public Candidato build() {
+            return new Candidato(id, siglaUf, cargoCodigo, cargoDescricao, nome);
+        }
     }
 }
