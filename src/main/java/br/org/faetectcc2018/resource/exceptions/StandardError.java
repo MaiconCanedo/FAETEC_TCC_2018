@@ -1,10 +1,11 @@
 package br.org.faetectcc2018.resource.exceptions;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 public class StandardError implements Serializable {
 
-    private Long timeStamp;
+    private LocalDateTime timeStamp;
     private Integer status;
     private String error;
     private String message;
@@ -14,7 +15,7 @@ public class StandardError implements Serializable {
     public StandardError() {
     }
 
-    public StandardError(Long timeStamp, Integer status, String error, String message, String path) {
+    public StandardError(LocalDateTime timeStamp, Integer status, String error, String message, String path) {
         this.timeStamp = timeStamp;
         this.status = status;
         this.error = error;
@@ -22,11 +23,15 @@ public class StandardError implements Serializable {
         this.path = path;
     }
 
-    public Long getTimeStamp() {
+    public StandardError(Integer status, String error, String message, String path) {
+        this(LocalDateTime.now(), status, error, message, path);
+    }
+
+    public LocalDateTime getTimeStamp() {
         return timeStamp;
     }
 
-    public void setTimeStamp(Long timeStamp) {
+    public void setTimeStamp(LocalDateTime timeStamp) {
         this.timeStamp = timeStamp;
     }
 

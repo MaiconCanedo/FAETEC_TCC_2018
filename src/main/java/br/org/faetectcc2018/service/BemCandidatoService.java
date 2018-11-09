@@ -22,10 +22,6 @@ public class BemCandidatoService {
         return repository.findById(id);
     }
 
-    public Optional<List<BemCandidato>> findAll() {
-        return Optional.ofNullable(repository.findAll());
-    }
-
     public Optional<Page<BemCandidato>> findPage(Integer page, Integer linesPerPage, String orderBy, String direction) {
         Page<BemCandidato> bemCandidatoPage = repository.findAll(PageRequest.of(page, linesPerPage, Sort.Direction.valueOf(direction), orderBy));
 
@@ -36,6 +32,10 @@ public class BemCandidatoService {
     }
 
     public Optional<List<TipoBemDTO>> findAllTipoDeBem() {
-        return Optional.ofNullable(repository.findDistinctByDsTipoBemCandidatoCustom());
+        List<TipoBemDTO> tipoBemDTOList = repository.findDistinctByDsTipoBemCandidatoCustom();
+        if (tipoBemDTOList == null || tipoBemDTOList.isEmpty())
+            return Optional.empty();
+
+        return Optional.of(tipoBemDTOList);
     }
 }

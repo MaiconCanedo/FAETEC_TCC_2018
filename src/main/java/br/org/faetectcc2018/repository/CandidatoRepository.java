@@ -14,7 +14,7 @@ import java.util.List;
 public interface CandidatoRepository extends JpaRepository<Candidato, Long> {
 
     @Transactional(readOnly = true)
-    @Query(value = "SELECT DISTINCT candidato.sgUf FROM Candidato candidato")
+    @Query(value = "SELECT DISTINCT candidato.sgUf FROM Candidato candidato ORDER BY candidato.sgUf")
     List<String> findEstados();
 
     @Transactional(readOnly = true)

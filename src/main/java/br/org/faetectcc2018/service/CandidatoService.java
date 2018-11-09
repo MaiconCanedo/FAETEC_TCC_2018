@@ -19,10 +19,6 @@ public class CandidatoService {
         return repository.findById(id);
     }
 
-    public Optional<List<Candidato>> findAll() {
-        return Optional.ofNullable(repository.findAll());
-    }
-
     public Optional<Page<Candidato>> findPage(Integer page, Integer linesPerPage, String orderBy, String direction) {
         Page<Candidato> candidatoPage = repository.findAll(PageRequest.of(page, linesPerPage, Sort.Direction.valueOf(direction), orderBy));
 
