@@ -18,14 +18,17 @@ public class CandidatoResource {
 
     @ApiOperation(value = "Retorna todos os candidatos com paginação")
     @RequestMapping(method = RequestMethod.GET)
-    public ResponseEntity<Page<Candidato>> findPage(@RequestParam(value = "page", defaultValue = "0") Integer page,
-                                                    @RequestParam(value = "linesPerPage", defaultValue = "24") Integer linesPerPage,
-                                                    @RequestParam(value = "orderBy", defaultValue = "id") String orderBy,
-                                                    @RequestParam(value = "direction", defaultValue = "ASC") String direction) {
-        return ResponseEntity.ok(service.findPage(page, linesPerPage, orderBy, direction)
+    public ResponseEntity<Page<Candidato>> findByCargoAndUf(@RequestParam(value = "uf", defaultValue = "") String siglaUf,
+                                                            @RequestParam(value = "cargo", defaultValue = "") String cargo,
+                                                            @RequestParam(value = "page", defaultValue = "0") Integer page,
+                                                            @RequestParam(value = "linesPerPage", defaultValue = "24") Integer linesPerPage,
+                                                            @RequestParam(value = "orderBy", defaultValue = "id") String orderBy,
+                                                            @RequestParam(value = "direction", defaultValue = "ASC") String direction) {
+        return ResponseEntity.ok(service.findByCargoAndUf(siglaUf, cargo, page, linesPerPage, orderBy, direction)
                 .orElseThrow(() -> new ObjectNotFoundException("Nenhum objeto foi encontrado! Tipo: " + Candidato.class.getName()))
         );
     }
+
 
     @ApiOperation(value = "Retorna um candidato")
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)

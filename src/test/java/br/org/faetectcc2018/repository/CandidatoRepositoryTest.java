@@ -7,11 +7,12 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import static org.springframework.data.domain.Sort.Direction.ASC;
+import static org.springframework.data.domain.PageRequest.of;
 
 import java.util.Arrays;
 import java.util.List;
@@ -51,8 +52,8 @@ public class CandidatoRepositoryTest {
 
         assertFalse("Nenhum objeto encontrado", cargos.isEmpty());
         assertEquals("Quantidade de dados salvos nao corresponde", 2, cargos.size());
-        assertEquals("Objeto encontrado nao corresponde a ordem alfabetica",cargoDescricao1, cargos.get(0).getDescricao());
-        assertEquals("Objeto encontrado nao corresponde a ordem alfabetica",cargoDescricao2, cargos.get(1).getDescricao());
+        assertEquals("Objeto encontrado nao corresponde a ordem alfabetica", cargoDescricao1, cargos.get(0).getDescricao());
+        assertEquals("Objeto encontrado nao corresponde a ordem alfabetica", cargoDescricao2, cargos.get(1).getDescricao());
     }
 
     @Test
@@ -78,7 +79,7 @@ public class CandidatoRepositoryTest {
 
         assertFalse("Nenhum objeto encontrado", cargos.isEmpty());
         assertEquals("Quantidade de dados salvos nao corresponde", 1, cargos.size());
-        assertEquals("Objeto encontrado nao eh do estado especificado",cargoDescricao, cargos.get(0).getDescricao());
+        assertEquals("Objeto encontrado nao eh do estado especificado", cargoDescricao, cargos.get(0).getDescricao());
     }
 
     @Test
@@ -129,49 +130,49 @@ public class CandidatoRepositoryTest {
     }
 
     @Test
-    public void findBySgUfAndCdCargo_SiglaUfCorretaCargoCodigoCorreto() {
+    public void findBySgUfAndDsCargo_SiglaUfCorretaCargoCodigoCorreto() {
         final String nome = "Manuel Deodoro da Fonseca";
         final String siglaUF = "RJ";
-        final Integer cargoCodigo = 1;
+        final String cargoDescricao = "PRESIDENTE";
 
         final Candidato candidato = new Candidato.Builder()
                 .comNome(nome)
-                .comCargoCodigo(cargoCodigo)
-                .comCargoDescricao("PRESIDENTE")
+                .comCargoCodigo(1)
+                .comCargoDescricao(cargoDescricao)
                 .comSiglaUf(siglaUF)
                 .build();
         candidatoRepository.save(candidato);
 
-        final Page<Candidato> candidatoPage = candidatoRepository.findBySgUfAndCdCargo(siglaUF, cargoCodigo, PageRequest.of(0, 20, Sort.Direction.ASC, "nmCandidato"));
+        final Page<Candidato> candidatoPage = candidatoRepository.findBySgUfAndDsCargo(siglaUF, cargoDescricao, of(0, 20, ASC, "nmCandidato"));
         assertFalse("Nenhum objeto foi encontrado", candidatoPage.getContent().isEmpty());
         assertEquals("Tamanho da lista é incoerente", 1, candidatoPage.getTotalElements());
         assertEquals("Objeto encontrado não corresponde", nome, candidatoPage.getContent().get(0).getNmCandidato());
     }
 
     @Test
-    public void findBySgUfAndCdCargo_TestarOrdemAlfabeticaSiglaUfCorretaCargoCodigoCorreto() {
+    public void findBySgUfAndDsCargo_TestarOrdemAlfabeticaSiglaUfCorretaCargoCodigoCorreto() {
         final String siglaUF = "RJ";
         final String nome1 = "Dilma Vana Rousseff";
         final String nome2 = "Luiz Inacio Lula da Silva";
-        final Integer cargoCodigo = 1;
+        final String cargoDescricao = "PRESIDENTE";
 
         final Candidato candidato1 = new Candidato.Builder()
                 .comNome(nome2)
-                .comCargoCodigo(cargoCodigo)
-                .comCargoDescricao("PRESIDENTE")
+                .comCargoCodigo(1)
+                .comCargoDescricao(cargoDescricao)
                 .comSiglaUf(siglaUF)
                 .build();
 
         final Candidato candidato2 = new Candidato.Builder()
                 .comNome(nome1)
-                .comCargoCodigo(cargoCodigo)
-                .comCargoDescricao("PRESIDENTE")
+                .comCargoCodigo(1)
+                .comCargoDescricao(cargoDescricao)
                 .comSiglaUf(siglaUF)
                 .build();
 
         candidatoRepository.saveAll(Arrays.asList(candidato1, candidato2));
 
-        final Page<Candidato> candidatoPage = candidatoRepository.findBySgUfAndCdCargo(siglaUF, cargoCodigo, PageRequest.of(0, 20, Sort.Direction.ASC, "nmCandidato"));
+        final Page<Candidato> candidatoPage = candidatoRepository.findBySgUfAndDsCargo(siglaUF, cargoDescricao, of(0, 20, ASC, "nmCandidato"));
         assertFalse("Nenhum objeto foi encontrado", candidatoPage.getContent().isEmpty());
         assertEquals("Tamanho da lista é incoerente", 2, candidatoPage.getTotalElements());
         assertEquals("Objeto encontrado não corresponde a ordem alfabetica", nome1, candidatoPage.getContent().get(0).getNmCandidato());
@@ -179,36 +180,36 @@ public class CandidatoRepositoryTest {
     }
 
     @Test
-    public void findBySgUfAndCdCargo_SiglaUfIncorretaCargoCodigoCorreto() {
+    public void findBySgUfAndDsCargo_SiglaUfIncorretaCargoCodigoCorreto() {
         final String nome = "Manuel Deodoro da Fonseca";
         final String siglaUF = "RJ";
-        final Integer cargoCodigo = 1;
+        final String cargoDescricao = "PRESIDENTE";
         final Candidato candidato = new Candidato.Builder()
                 .comNome(nome)
-                .comCargoCodigo(cargoCodigo)
+                .comCargoCodigo(1)
                 .comCargoDescricao("PRESIDENTE")
                 .comSiglaUf(siglaUF)
                 .build();
         candidatoRepository.save(candidato);
 
-        final Page<Candidato> candidatoPage = candidatoRepository.findBySgUfAndCdCargo("ER", cargoCodigo, PageRequest.of(0, 20, Sort.Direction.ASC, "nmCandidato"));
+        final Page<Candidato> candidatoPage = candidatoRepository.findBySgUfAndDsCargo("ER", cargoDescricao, of(0, 20, ASC, "nmCandidato"));
         assertTrue("Objeto foi encontrado, mesmo informando sigla incorreta", candidatoPage.getContent().isEmpty());
     }
 
     @Test
-    public void findBySgUfAndCdCargo_SiglaUfCorretaCargoCodigoIncorreto() {
+    public void findBySgUfAndDsCargo_SiglaUfCorretaCargoCodigoIncorreto() {
         final String nome = "Manuel Deodoro da Fonseca";
         final String siglaUF = "RJ";
-        final Integer cargoCodigo = 1;
+        final String cargoDescricao = "PRESIDENTE";
         final Candidato candidato = new Candidato.Builder()
                 .comNome(nome)
-                .comCargoCodigo(cargoCodigo)
+                .comCargoCodigo(1)
                 .comCargoDescricao("PRESIDENTE")
                 .comSiglaUf(siglaUF)
                 .build();
         candidatoRepository.save(candidato);
 
-        final Page<Candidato> candidatoPage = candidatoRepository.findBySgUfAndCdCargo(siglaUF, 9, PageRequest.of(0, 20, Sort.Direction.ASC, "nmCandidato"));
+        final Page<Candidato> candidatoPage = candidatoRepository.findBySgUfAndDsCargo(siglaUF, cargoDescricao, of(0, 20, ASC, "nmCandidato"));
         assertTrue("Objeto foi encontrado, mesmo informando codigo do cargo errado", candidatoPage.getContent().isEmpty());
     }
 }

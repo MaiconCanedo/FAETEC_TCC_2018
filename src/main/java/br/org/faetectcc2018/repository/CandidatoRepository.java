@@ -22,5 +22,5 @@ public interface CandidatoRepository extends JpaRepository<Candidato, Long> {
     List<CargoDTO> findBySgUfAndDistinctByCdCargo(@Param(value = "sgUf") String sgUf);
 
     @Transactional(readOnly = true)
-    Page<Candidato> findBySgUfAndCdCargo(String sgUf, Integer cdCargo, Pageable pageable);
+    Page<Candidato> findBySgUfAndDsCargo(String sgUf, String cdCargo, Pageable pageable);
 }

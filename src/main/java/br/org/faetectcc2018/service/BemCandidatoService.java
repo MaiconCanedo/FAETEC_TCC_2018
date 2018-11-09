@@ -33,6 +33,7 @@ public class BemCandidatoService {
 
     public Optional<List<TipoBemDTO>> findAllTipoDeBem() {
         List<TipoBemDTO> tipoBemDTOList = repository.findDistinctByDsTipoBemCandidatoCustom();
+
         if (tipoBemDTOList == null || tipoBemDTOList.isEmpty())
             return Optional.empty();
 
