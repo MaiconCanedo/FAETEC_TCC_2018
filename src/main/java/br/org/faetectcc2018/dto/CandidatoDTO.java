@@ -12,6 +12,8 @@ public class CandidatoDTO {
     private String numero;
     private Integer codigoCargo;
     private String descricaoCargo;
+    private String siglaUf;
+    private String cpf;
 
     public CandidatoDTO() {
     }
@@ -23,6 +25,8 @@ public class CandidatoDTO {
         numero = candidato.getNrCandidato();
         codigoCargo = candidato.getCdCargo();
         descricaoCargo = candidato.getDsCargo();
+        siglaUf = candidato.getSgUf();
+        cpf = candidato.getNrCpfCandidato();
     }
 
     public Long getId() {
@@ -73,15 +77,21 @@ public class CandidatoDTO {
         this.descricaoCargo = descricaoCargo;
     }
 
-    @Override
-    public String toString() {
-        return new StringJoiner(", ", CandidatoDTO.class.getSimpleName() + "[", "]")
-                .add("id=" + id)
-                .add("sequencialCandidato='" + sequencialCandidato + "'")
-                .add("nome='" + nome + "'")
-                .add("numero='" + numero + "'")
-                .add("codigoCargo=" + codigoCargo)
-                .add("descricaoCargo='" + descricaoCargo + "'")
-                .toString();
+    public String getSiglaUf() {
+        return siglaUf;
+    }
+
+    public CandidatoDTO setSiglaUf(String siglaUf) {
+        this.siglaUf = siglaUf;
+        return this;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public CandidatoDTO setCpf(String cpf) {
+        this.cpf = cpf;
+        return this;
     }
 }

@@ -34,6 +34,14 @@ public class BemCandidato {
     private LocalDate dtUltimaAtualizacao;
     private LocalTime hhUltimaAtualizacao;
 
+    public BemCandidato() {
+    }
+
+    public BemCandidato(Integer tipoBemCodigo, String tipoBemDescricao) {
+        this.cdTipoBemCandidato = tipoBemCodigo;
+        this.dsTipoBemCandidato = tipoBemDescricao;
+    }
+
     public Long getId() {
         return id;
     }
@@ -204,5 +212,24 @@ public class BemCandidato {
     @Override
     public int hashCode() {
         return Objects.hash(id);
+    }
+
+    public static class Builder {
+        private Integer tipoBemCodigo;
+        private String tipoBemDescricao;
+
+        public Builder comTipoBemCodigo(Integer tipoBemCodigo) {
+            this.tipoBemCodigo = tipoBemCodigo;
+            return this;
+        }
+
+        public Builder comTipoBemDescricao(String tipoBemDescricao) {
+            this.tipoBemDescricao = tipoBemDescricao;
+            return this;
+        }
+
+        public BemCandidato buiild() {
+            return new BemCandidato(tipoBemCodigo, tipoBemDescricao);
+        }
     }
 }
