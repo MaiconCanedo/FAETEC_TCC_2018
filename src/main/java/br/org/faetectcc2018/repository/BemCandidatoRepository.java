@@ -11,6 +11,7 @@ import java.util.List;
 public interface BemCandidatoRepository extends JpaRepository<BemCandidato, Long> {
 
     @Transactional(readOnly = true)
-    @Query("SELECT DISTINCT new br.org.faetectcc2018.dto.TipoBemDTO(bem.cdTipoBemCandidato, bem.dsTipoBemCandidato) FROM BemCandidato bem WHERE bem.cdTipoBemCandidato IS NOT NULL AND bem.dsTipoBemCandidato IS NOT NULL ORDER BY bem.dsTipoBemCandidato")
+    @Query("SELECT DISTINCT new br.org.faetectcc2018.dto.TipoBemDTO(bem.cdTipoBemCandidato, bem.dsTipoBemCandidato) FROM BemCandidato bem " +
+            "WHERE bem.cdTipoBemCandidato IS NOT NULL AND bem.dsTipoBemCandidato IS NOT NULL ORDER BY bem.dsTipoBemCandidato")
     List<TipoBemDTO> findDistinctByDsTipoBemCandidatoCustom();
 }

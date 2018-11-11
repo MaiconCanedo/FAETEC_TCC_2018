@@ -50,7 +50,6 @@ public class BemCandidatoRepositoryTest {
 
     @Test
     public void findDistinctByDsTipoBemCandidatoCustom_CodigoPreenchidoDescricaoNaoInformada() {
-        final String descricao = "Veículo Automotor";
         final BemCandidato bemCandidato = new BemCandidato.Builder().comTipoBemCodigo(1).buiild();
         bemCandidatoRepository.save(bemCandidato);
 
@@ -61,7 +60,6 @@ public class BemCandidatoRepositoryTest {
 
     @Test
     public void findDistinctByDsTipoBemCandidatoCustom_CodigoNaoPreenchidoDescricaoNaoInformada() {
-        final String descricao = "Veículo Automotor";
         final BemCandidato bemCandidato = new BemCandidato.Builder().buiild();
         bemCandidatoRepository.save(bemCandidato);
 

@@ -23,7 +23,7 @@ public class BemCandidatoResource {
     @RequestMapping(method = RequestMethod.GET)
     public ResponseEntity<Page<BemCandidato>> findPage(@RequestParam(value = "page", defaultValue = "0") Integer page,
                                                        @RequestParam(value = "linesPerPage", defaultValue = "24") Integer linesPerPage,
-                                                       @RequestParam(value = "orderBy", defaultValue = "id") String orderBy,
+                                                       @RequestParam(value = "orderBy", defaultValue = "dsTipoBemCandidato") String orderBy,
                                                        @RequestParam(value = "direction", defaultValue = "ASC") String direction) {
         return ResponseEntity.ok(
                 service.findPage(page, linesPerPage, orderBy, direction)
@@ -40,7 +40,7 @@ public class BemCandidatoResource {
         );
     }
 
-    @ApiOperation(value = "Retorna todos os tipos de bens ordenados por nome")
+    @ApiOperation(value = "Retorna todos os tipos de bens em ordem alfabética por nome")
     @RequestMapping(value = "/tipo", method = RequestMethod.GET)
     public ResponseEntity<List<TipoBemDTO>> findTipoDeBem() {
         return ResponseEntity.ok(service.findAllTipoDeBem().orElseThrow(() -> new ObjectNotFoundException("Nenhum objeto foi encontrado!")));

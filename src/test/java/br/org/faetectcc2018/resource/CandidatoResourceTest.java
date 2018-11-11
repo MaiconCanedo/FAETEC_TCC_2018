@@ -201,7 +201,6 @@ public class CandidatoResourceTest {
         }
 
         assertEquals("Era esperado um status 200 OK", HttpStatus.OK.value(), response.code());
-        //TODO: É necessário criar um teste para averiguar o tipo de retorno dos dados requeridos
         assertNotNull("Era esperado um corpo", response.body());
         assertEquals("Lista não contém a quantidade correta de objetos", 1, response.body().size());
         assertEquals("O estado encontrado não era o esperado", siglaUf, response.body().get(0));
