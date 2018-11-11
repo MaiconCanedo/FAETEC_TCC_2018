@@ -16,7 +16,7 @@ public class DespesaCandidatoResource {
     @Autowired
     private DespesaCandidatoService service;
 
-    @ApiOperation(value = "Retorna uma votação pelo id")
+    @ApiOperation(value = "Retorna uma despesa pelo id")
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public ResponseEntity<DespesaCandidato> find(@PathVariable Long id) {
         return ResponseEntity.ok(

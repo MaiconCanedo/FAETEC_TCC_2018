@@ -11,6 +11,8 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
+import org.springframework.test.annotation.DirtiesContext;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import retrofit2.Retrofit;
 import retrofit2.converter.jackson.JacksonConverterFactory;
@@ -21,26 +23,20 @@ import java.util.Optional;
 
 import static org.junit.Assert.*;
 
+@ActiveProfiles("test")
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
+@DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_EACH_TEST_METHOD)
 public class BemCandidatoResourceTest {
 
     @Autowired
-    private ObjectMapper objectMapper;
     private Retrofit retrofit;
-    private OkHttpClient.Builder httpClient;
+
     private BemCandidatoRestService bemCandidatoRestService;
-    private static final String BASE_URL = "http://localhost:8080";
 
     @Before
     public void setUp() throws Exception {
-        httpClient = new OkHttpClient.Builder();
-        retrofit = new Retrofit.Builder()
-                .baseUrl(BASE_URL)
-                .addConverterFactory(JacksonConverterFactory.create(objectMapper))
-                .client(httpClient.build())
-                .build();
-        bemCandidatoRestService = retrofit.create(BemCandidatoRestService.class);
+
     }
 
     @Test

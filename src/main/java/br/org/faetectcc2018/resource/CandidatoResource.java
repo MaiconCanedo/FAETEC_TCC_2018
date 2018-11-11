@@ -19,13 +19,13 @@ public class CandidatoResource {
     @Autowired
     private CandidatoService service;
 
-    @ApiOperation(value = "Retorna todos os candidatos com paginação")
+    @ApiOperation(value = "Retorna uma lista de candidatos com paginação, filtrada pela unidade federativa e pelo código do cargo")
     @RequestMapping(method = RequestMethod.GET)
     public ResponseEntity<Page<CandidatoDTO>> findByCargoAndUf(@RequestParam(value = "uf", defaultValue = "") String siglaUf,
                                                                @RequestParam(value = "cargo", defaultValue = "0") Integer cargo,
                                                                @RequestParam(value = "page", defaultValue = "0") Integer page,
                                                                @RequestParam(value = "linesPerPage", defaultValue = "24") Integer linesPerPage,
-                                                               @RequestParam(value = "orderBy", defaultValue = "id") String orderBy,
+                                                               @RequestParam(value = "orderBy", defaultValue = "nmCandidato") String orderBy,
                                                                @RequestParam(value = "direction", defaultValue = "ASC") String direction) {
         return ResponseEntity.ok(service.findByCargoAndUf(siglaUf, cargo, page, linesPerPage, orderBy, direction)
                 .orElseThrow(() -> new ObjectNotFoundException("Nenhum objeto foi encontrado! Tipo: " + Candidato.class.getName()))
@@ -41,6 +41,7 @@ public class CandidatoResource {
         );
     }
 
+    @ApiOperation(value = "Retorna as siglas dos estados que contém candidatos")
     @RequestMapping(value = "/estado", method = RequestMethod.GET)
     public ResponseEntity<List<String>> findEstados() {
         return ResponseEntity.ok(service.findEstados()

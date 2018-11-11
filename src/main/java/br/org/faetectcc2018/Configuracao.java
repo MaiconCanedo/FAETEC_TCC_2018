@@ -1,5 +1,6 @@
 
 package br.org.faetectcc2018;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
